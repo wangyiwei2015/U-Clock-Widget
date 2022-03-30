@@ -18,6 +18,12 @@
 		4DA5470827F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */; };
 		4DA5470927F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */; };
 		4DA5470C27F45F9D00CD04EF /* UCWGextExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DA546FB27F45F9D00CD04EF /* UCWGextExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4DA5471327F46B6600CD04EF /* FlowerClockShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471227F46B6600CD04EF /* FlowerClockShape.swift */; };
+		4DA5471427F46B6600CD04EF /* FlowerClockShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471227F46B6600CD04EF /* FlowerClockShape.swift */; };
+		4DA5471627F4A2D900CD04EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471527F4A2D900CD04EF /* Utils.swift */; };
+		4DA5471727F4A2D900CD04EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471527F4A2D900CD04EF /* Utils.swift */; };
+		4DA5471927F4A36C00CD04EF /* FlowerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */; };
+		4DA5471A27F4A36C00CD04EF /* FlowerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,9 @@
 		4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = UCWGext.intentdefinition; sourceTree = "<group>"; };
 		4DA5470527F45F9D00CD04EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA5470727F45F9D00CD04EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA5471227F46B6600CD04EF /* FlowerClockShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerClockShape.swift; sourceTree = "<group>"; };
+		4DA5471527F4A2D900CD04EF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerClockView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,7 @@
 			children = (
 				4DA546E727F45E7900CD04EF /* uclockwidget */,
 				4DA5470127F45F9D00CD04EF /* UCWGext */,
+				4DA5471127F46B4D00CD04EF /* shared */,
 				4DA546FC27F45F9D00CD04EF /* Frameworks */,
 				4DA546E627F45E7900CD04EF /* Products */,
 			);
@@ -138,6 +148,16 @@
 				4DA5470727F45F9D00CD04EF /* Info.plist */,
 			);
 			path = UCWGext;
+			sourceTree = "<group>";
+		};
+		4DA5471127F46B4D00CD04EF /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				4DA5471227F46B6600CD04EF /* FlowerClockShape.swift */,
+				4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */,
+				4DA5471527F4A2D900CD04EF /* Utils.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA5471627F4A2D900CD04EF /* Utils.swift in Sources */,
 				4DA5470927F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */,
+				4DA5471927F4A36C00CD04EF /* FlowerClockView.swift in Sources */,
+				4DA5471327F46B6600CD04EF /* FlowerClockShape.swift in Sources */,
 				4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */,
 				4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */,
 			);
@@ -251,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA5471427F46B6600CD04EF /* FlowerClockShape.swift in Sources */,
 				4DA5470827F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */,
 				4DA5470327F45F9D00CD04EF /* UCWGext.swift in Sources */,
+				4DA5471A27F4A36C00CD04EF /* FlowerClockView.swift in Sources */,
+				4DA5471727F4A2D900CD04EF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

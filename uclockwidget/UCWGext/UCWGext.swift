@@ -24,13 +24,20 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
+        if configuration.showsSec == 1 {
+            for hourOffset in 0 ..< 3600 {
+                let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
+                let entry = SimpleEntry(date: entryDate, configuration: configuration)
+                entries.append(entry)
+            }
+        } else {
+            for hourOffset in 0 ..< 60 {
+                let entryDate = Calendar.current.date(byAdding: .minute, value: hourOffset, to: currentDate)!
+                let entry = SimpleEntry(date: entryDate, configuration: configuration)
+                entries.append(entry)
+            }
+        }//每次更新60分钟的数据，结束后下一组时间线
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
@@ -43,10 +50,35 @@ struct SimpleEntry: TimelineEntry {
 }
 
 struct UCWGextEntryView : View {
-    var entry: Provider.Entry
+    @Environment(\.widgetFamily) var family: WidgetFamily
+    @State var entry: Provider.Entry
+    let formatter: DateFormatter = {
+        let fmt = DateFormatter()
+        fmt.dateFormat = "HHmmss"
+        return fmt
+    }()
 
+    @ViewBuilder
     var body: some View {
-        Text(entry.date, style: .time)
+//        switch family {
+//        case .systemSmall:
+//            Text(entry.date, style: .time)
+//        case .systemMedium:
+//            Text(entry.date, style: .time)
+//        case .systemLarge:
+//            Text(entry.date, style: .time)
+//        default: fatalError()
+//        }
+        FlowerClockView(
+            dateFormat: nil,
+            fingerColorHue: entry.configuration.colorHue as? Double ?? 0.0,
+            showSeconds: entry.configuration.showsSec == 1,
+            showNumbers: entry.configuration.showsNumber == 1,
+            shape: FlowerClockView.ClockShape(rawValue: entry.configuration.bgShape.rawValue - 1) ?? .flower,
+            hor: Double(Int(formatter.string(from: entry.date))! / 10000),
+            mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
+            sec: Double(Int(formatter.string(from: entry.date))! % 100)
+        ).padding()
     }
 }
 
@@ -58,8 +90,9 @@ struct UCWGext: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             UCWGextEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("U Clock")
+        .description("Material styled clock widget")
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 

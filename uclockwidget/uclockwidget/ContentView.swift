@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            FlowerClockView(
+                dateFormat: "EE dd",
+                fingerColorHue: 0.8,
+                showSeconds: true,
+                showNumbers: true,
+                shape: .flower,
+                hor: 10, mnt: 35, sec: 20
+            )//.frame(width: 300, height: 200)
+            .background(Color.gray)
+        }
     }
 }
 

@@ -25,19 +25,11 @@ struct Provider: IntentTimelineProvider {
         var entries: [SimpleEntry] = []
 
         let currentDate = Date()
-        if configuration.showsSec == 1 {
-            for hourOffset in 0 ..< 3600 {
-                let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
-                let entry = SimpleEntry(date: entryDate, configuration: configuration)
-                entries.append(entry)
-            }
-        } else {
-            for hourOffset in 0 ..< 60 {
-                let entryDate = Calendar.current.date(byAdding: .minute, value: hourOffset, to: currentDate)!
-                let entry = SimpleEntry(date: entryDate, configuration: configuration)
-                entries.append(entry)
-            }
-        }//每次更新60分钟的数据，结束后下一组时间线
+        for hourOffset in 0 ..< 15 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
+            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            entries.append(entry)
+        }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
@@ -51,12 +43,17 @@ struct SimpleEntry: TimelineEntry {
 
 struct UCWGextEntryView : View {
     @Environment(\.widgetFamily) var family: WidgetFamily
-    @State var entry: Provider.Entry
+    var entry: Provider.Entry
+    var bgShape: FlowerClockView.ClockShape
+    
     let formatter: DateFormatter = {
         let fmt = DateFormatter()
         fmt.dateFormat = "HHmmss"
         return fmt
     }()
+    let colorHues: [Double?] = [
+        nil, UserDefaults.standard.double(forKey: "_IMG_COLOR"), 0, 0.05, 0.11, 0.32, 0.5, 0.6, 0.73, 0.78, 0.88, nil
+    ]
 
     @ViewBuilder
     var body: some View {
@@ -70,27 +67,56 @@ struct UCWGextEntryView : View {
 //        default: fatalError()
 //        }
         FlowerClockView(
-            dateFormat: nil,
-            fingerColorHue: entry.configuration.colorHue as? Double ?? 0.0,
+            dateFormat: entry.configuration.dateFormat,
+            date: entry.date,
+            fingerColorHue: colorHues[entry.configuration.colorTheme.rawValue],
             showSeconds: entry.configuration.showsSec == 1,
             showNumbers: entry.configuration.showsNumber == 1,
-            shape: FlowerClockView.ClockShape(rawValue: entry.configuration.bgShape.rawValue - 1) ?? .flower,
+            shape: bgShape,
+            bordered: entry.configuration.bordered == 1,
             hor: Double(Int(formatter.string(from: entry.date))! / 10000),
             mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
             sec: Double(Int(formatter.string(from: entry.date))! % 100)
-        ).padding()
+        ).padding().background(Color(UIColor.systemGray6))
     }
 }
 
 @main
-struct UCWGext: Widget {
+struct UCWGext: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        UCWG_Rounded()
+        UCWG_Flower()
+    }
+}
+
+struct UCWG_Rounded: Widget {
     let kind: String = "UCWGext"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            UCWGextEntryView(entry: entry)
+        IntentConfiguration(
+            kind: kind, intent: ConfigurationIntent.self,
+            provider: Provider()
+        ) { entry in
+            UCWGextEntryView(entry: entry, bgShape: .rounded)
         }
-        .configurationDisplayName("U Clock")
+        .configurationDisplayName("Rounded Clock")
+        .description("Material styled clock widget")
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+    }
+}
+
+struct UCWG_Flower: Widget {
+    let kind: String = "UCWGext"
+
+    var body: some WidgetConfiguration {
+        IntentConfiguration(
+            kind: kind, intent: ConfigurationIntent.self,
+            provider: Provider()
+        ) { entry in
+            UCWGextEntryView(entry: entry, bgShape: .flower)
+        }
+        .configurationDisplayName("Flower Clock")
         .description("Material styled clock widget")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
@@ -98,7 +124,7 @@ struct UCWGext: Widget {
 
 struct UCWGext_Previews: PreviewProvider {
     static var previews: some View {
-        UCWGextEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        UCWGextEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()), bgShape: .flower)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

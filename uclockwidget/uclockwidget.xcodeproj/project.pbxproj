@@ -24,6 +24,9 @@
 		4DA5471727F4A2D900CD04EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471527F4A2D900CD04EF /* Utils.swift */; };
 		4DA5471927F4A36C00CD04EF /* FlowerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */; };
 		4DA5471A27F4A36C00CD04EF /* FlowerClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */; };
+		4DC8B62D27F59E7D00B7A927 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */; };
+		4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */; };
+		773217DB9A28531A556D9A3B /* Pods_uclockwidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,11 @@
 		4DA5471227F46B6600CD04EF /* FlowerClockShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerClockShape.swift; sourceTree = "<group>"; };
 		4DA5471527F4A2D900CD04EF /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4DA5471827F4A36C00CD04EF /* FlowerClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerClockView.swift; sourceTree = "<group>"; };
+		4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; };
+		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
+		B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.release.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773217DB9A28531A556D9A3B /* Pods_uclockwidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,7 @@
 				4DA5471127F46B4D00CD04EF /* shared */,
 				4DA546FC27F45F9D00CD04EF /* Frameworks */,
 				4DA546E627F45E7900CD04EF /* Products */,
+				DE00CE5B51E9C9A3F6A4B86C /* Pods */,
 			);
 			sourceTree = "<group>";
 			wrapsLines = 0;
@@ -118,6 +128,8 @@
 				4DA546EA27F45E7900CD04EF /* ContentView.swift */,
 				4DA546EC27F45E7A00CD04EF /* Assets.xcassets */,
 				4DA546EE27F45E7A00CD04EF /* Preview Content */,
+				4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */,
+				4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */,
 			);
 			path = uclockwidget;
 			sourceTree = "<group>";
@@ -135,6 +147,7 @@
 			children = (
 				4DA546FD27F45F9D00CD04EF /* WidgetKit.framework */,
 				4DA546FF27F45F9D00CD04EF /* SwiftUI.framework */,
+				695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,6 +173,15 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
+		DE00CE5B51E9C9A3F6A4B86C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */,
+				B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,10 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DA546F327F45E7A00CD04EF /* Build configuration list for PBXNativeTarget "uclockwidget" */;
 			buildPhases = (
+				75E29C38F8C9C8B6A82FCE78 /* [CP] Check Pods Manifest.lock */,
 				4DA546E127F45E7900CD04EF /* Sources */,
 				4DA546E227F45E7900CD04EF /* Frameworks */,
 				4DA546E327F45E7900CD04EF /* Resources */,
 				4DA5471027F45F9D00CD04EF /* Embed App Extensions */,
+				11EADBAE45BA9EBFB0688238 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +280,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11EADBAE45BA9EBFB0688238 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uclockwidget/Pods-uclockwidget-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uclockwidget/Pods-uclockwidget-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uclockwidget/Pods-uclockwidget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75E29C38F8C9C8B6A82FCE78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-uclockwidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DA546E127F45E7900CD04EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,9 +330,11 @@
 				4DA5471627F4A2D900CD04EF /* Utils.swift in Sources */,
 				4DA5470927F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */,
 				4DA5471927F4A36C00CD04EF /* FlowerClockView.swift in Sources */,
+				4DC8B62D27F59E7D00B7A927 /* ImagePicker.swift in Sources */,
 				4DA5471327F46B6600CD04EF /* FlowerClockShape.swift in Sources */,
 				4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */,
 				4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */,
+				4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +477,7 @@
 		};
 		4DA546F427F45E7A00CD04EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -442,6 +511,7 @@
 		};
 		4DA546F527F45E7A00CD04EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

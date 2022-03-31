@@ -1,0 +1,10 @@
+platform :ios, '15.2'
+
+target 'uclockwidget' do
+  use_frameworks!
+  pod 'ColorThiefSwift'
+end
+
+#target 'UCWGextExtension' do
+#  use_frameworks!
+#end

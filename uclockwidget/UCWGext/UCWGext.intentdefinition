@@ -226,7 +226,7 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>21E230</string>
+	<string>21E258</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
 	<string>13E113</string>
 	<key>INIntentDefinitionToolsVersion</key>
@@ -309,7 +309,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>Shape Style</string>
+					<string>Bordered</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>UuzIZ5</string>
 					<key>INIntentParameterDisplayPriority</key>
@@ -326,7 +326,7 @@
 						<string>PSAKfj</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>bordered</string>
+					<string>_bordered</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>

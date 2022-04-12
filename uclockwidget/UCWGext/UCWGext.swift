@@ -73,7 +73,7 @@ struct UCWGextEntryView : View {
             showSeconds: entry.configuration.showsSec == 1,
             showNumbers: entry.configuration.showsNumber == 1,
             shape: bgShape,
-            bordered: entry.configuration.bordered == 1,
+            bordered: entry.configuration._bordered == 1,
             hor: Double(Int(formatter.string(from: entry.date))! / 10000),
             mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
             sec: Double(Int(formatter.string(from: entry.date))! % 100)
@@ -91,7 +91,7 @@ struct UCWGext: WidgetBundle {
 }
 
 struct UCWG_Rounded: Widget {
-    let kind: String = "UCWGext"
+    let kind: String = "com.wyw.uclock.widget.rounded"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(
@@ -107,7 +107,7 @@ struct UCWG_Rounded: Widget {
 }
 
 struct UCWG_Flower: Widget {
-    let kind: String = "UCWGext"
+    let kind: String = "com.wyw.uclock.widget.flower"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(

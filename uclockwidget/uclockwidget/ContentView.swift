@@ -88,7 +88,8 @@ struct ContentView: View {
         if let darkImg = bgDark {
             UserDefaults.standard.set(darkImg, forKey: "_IMG_D")
         }
-        
+        //clip
+        screenProperties
     }
 }
 

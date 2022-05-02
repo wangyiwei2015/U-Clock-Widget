@@ -12,6 +12,9 @@ struct uclockwidgetApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    try? FileManager.default.createDirectory(at: URL(fileURLWithPath: imgPath), withIntermediateDirectories: true)
+                }
         }
     }
 }

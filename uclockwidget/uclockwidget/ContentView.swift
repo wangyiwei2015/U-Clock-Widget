@@ -11,8 +11,8 @@ import ColorThiefSwift
 struct ContentView: View {
     @State var hor: Int = 0
     
-    @State var bgBright: UIImage? = UserDefaults.standard.object(forKey: "_IMG_B") as? UIImage
-    @State var bgDark: UIImage? = UserDefaults.standard.object(forKey: "_IMG_D") as? UIImage
+    @State var bgBright: UIImage? = try? UIImage(data: Data(contentsOf: URL(fileURLWithPath: "\(imgPath)/imgB.jpg")))
+    @State var bgDark: UIImage? = try? UIImage(data: Data(contentsOf: URL(fileURLWithPath: "\(imgPath)/imgD.jpg")))
     
     @State var isPickingLight = true
     @State var showsPicker = false
@@ -81,15 +81,23 @@ struct ContentView: View {
     
     func updateWallpaperSave() {
         if let brightImg = bgBright {
-            UserDefaults.standard.set(brightImg, forKey: "_IMG_B")
+            try! brightImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgB.jpg"), options: .atomic)
             let theme = ColorThief.getColor(from: brightImg)
-            UserDefaults.standard.set(theme?.makeUIColor(), forKey: "_IMG_COLOR")
+            //UserDefaults.standard.set(theme?.makeUIColor(), forKey: "_IMG_COLOR")
+            for pos in 1...9 {
+                let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
+                try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
+            }
         }
         if let darkImg = bgDark {
             UserDefaults.standard.set(darkImg, forKey: "_IMG_D")
+            for pos in 1...9 {
+                let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
+                try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
+                //private/var/mobile/Containers/Shared/AppGroup/9BBFC399-81E4-430E-89C2-DBA739700CCC/Documents/img/imgD1.jpg
+            }
         }
-        //clip
-        screenProperties
+        print(imgPath)
     }
 }
 

@@ -17,6 +17,7 @@ struct FlowerClockView: View {
     var showNumbers: Bool
     var shape: ClockShape
     var bordered: Bool
+    var bg: UIImage?
     
     var hor: Double
     var mnt: Double
@@ -56,66 +57,78 @@ struct FlowerClockView: View {
     }
     
     var body: some View {
-        GeometryReader {geo in
-            let r = min(geo.size.width, geo.size.height) / 2
-            ZStack {
-                switch shape {
-                case .rounded:
-                    Circle().fill()
-                        .foregroundColor(bgColor)
-                case .roundedBorder:
-                    Circle().strokeBorder(lineWidth: r * 0.1)
-                        .foregroundColor(bgColor)
-                case .flower:
-                    FlowerClockShape()
-                        .fill().foregroundColor(bgColor)
-                case .flowerBorder:
-                    FlowerClockShape().stroke(lineWidth: r * 0.1)
-                        .foregroundColor(bgColor)
-                }
-                
-                if showNumbers {
-                    ZStack {
-                        Text("12").offset(y: -r * 0.5)
-                        Text("3").offset(x: r * 0.5)
-                        Text("6").offset(y: r * 0.5)
-                        Text("9").offset(x: -r * 0.5)
-                    }.font(.system(size: r * 0.57, weight: .black, design: .rounded))
-                        .foregroundColor(Color(UIColor.systemGray6))
-                        .opacity(0.5)
-                }
-                
-                if showSeconds {
-                    VStack {
-                        DateText(r)
-                        Spacer()
-                        Circle().fill()
-                            .foregroundColor(Color(UIColor.systemGray6))
-                            .opacity(0.7)
-                            .frame(width: r * 0.16, height: r * 0.16)
-                            .padding(r * 0.22)
+        ZStack {
+            if let img = bg {
+                Image(uiImage: img).resizable().scaledToFill().ignoresSafeArea()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            GeometryReader {geo in
+                let r = min(geo.size.width, geo.size.height) / 2
+                ZStack {
+                    
+                    Group {
+                        switch shape {
+                        case .rounded:
+                            if !bordered {
+                                Circle().fill()
+                            } else {
+                                Circle().strokeBorder(lineWidth: r * 0.1)
+                            }
+                        case .flower:
+                            if !bordered {
+                                FlowerClockShape()
+                            } else {
+                                FlowerClockShape().stroke(lineWidth: r * 0.1)
+                            }
+                        default: fatalError()
+                        }
+                    }.foregroundColor(bgColor)
+                    
+                    Group {
+                        if showNumbers {
+                            ZStack {
+                                Text("12").offset(y: -r * 0.5)
+                                Text("3").offset(x: r * 0.5)
+                                Text("6").offset(y: r * 0.5)
+                                Text("9").offset(x: -r * 0.5)
+                            }.font(.system(size: r * 0.57, weight: .black, design: .rounded))
+                                .foregroundColor(Color(UIColor.systemGray6))
+                                .opacity(0.5)
+                        }
+                        
+                        if showSeconds {
+                            VStack {
+                                DateText(r)
+                                Spacer()
+                                Circle().fill()
+                                    .foregroundColor(Color(UIColor.systemGray6))
+                                    .opacity(0.7)
+                                    .frame(width: r * 0.16, height: r * 0.16)
+                                    .padding(r * 0.22)
+                            }
+                            .rotationEffect(Angle(degrees: sec * 6 + 180))
+                        } else {
+                            VStack {
+                                DateText(r)
+                                Spacer()
+                            }
+                        }
                     }
-                    .rotationEffect(Angle(degrees: sec * 6 + 180))
-                } else {
-                    VStack {
-                        DateText(r)
-                        Spacer()
-                    }
-                }
-                
-                Capsule().fill()
-                    .foregroundColor(firstColor)
-                    .frame(width: r * 0.16, height: r * 0.48)
-                    .offset(y: -r * 0.24 + r * 0.08)
-                    .rotationEffect(Angle(degrees: hor * 30 + mnt / 2))
-                Capsule().fill()
-                    .foregroundColor(secondColor)
-                    .frame(width: r * 0.16, height: r * 0.6)
-                    .offset(y: -r * 0.3 + r * 0.08)
-                    .rotationEffect(Angle(degrees: mnt * 6))
-                
-            }.frame(width: r * 2, height: r * 2, alignment: .center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
+                    Capsule().fill()
+                        .foregroundColor(firstColor)
+                        .frame(width: r * 0.16, height: r * 0.48)
+                        .offset(y: -r * 0.24 + r * 0.08)
+                        .rotationEffect(Angle(degrees: hor * 30 + mnt / 2))
+                    Capsule().fill()
+                        .foregroundColor(secondColor)
+                        .frame(width: r * 0.16, height: r * 0.6)
+                        .offset(y: -r * 0.3 + r * 0.08)
+                        .rotationEffect(Angle(degrees: mnt * 6))
+                    
+                }.frame(width: r * 2, height: r * 2, alignment: .center)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }.padding()
         }
     }
     

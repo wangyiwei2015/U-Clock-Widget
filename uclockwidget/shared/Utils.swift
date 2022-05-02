@@ -24,3 +24,5 @@ func /<T: BinaryFloatingPoint>(lhs: CGSize, rhs: T) -> CGSize {
 func +(lhs: CGPoint, rhs: CGSize) -> CGPoint {
     CGPoint(x: lhs.x + rhs.width, y: lhs.y + rhs.height)
 }
+
+let imgPath = "\(FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.wyw.uclock")!.path)/Documents/img"

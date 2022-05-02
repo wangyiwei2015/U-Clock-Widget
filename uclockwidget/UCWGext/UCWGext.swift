@@ -25,13 +25,13 @@ struct Provider: IntentTimelineProvider {
         var entries: [SimpleEntry] = []
 
         let currentDate = Date()
-        for hourOffset in 0 ..< 15 {
+        for hourOffset in 0 ..< 30 {
             let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
             let entry = SimpleEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .after(Calendar.current.date(byAdding: .second, value: 30, to: currentDate)!))
         completion(timeline)
     }
 }
@@ -43,6 +43,7 @@ struct SimpleEntry: TimelineEntry {
 
 struct UCWGextEntryView : View {
     @Environment(\.widgetFamily) var family: WidgetFamily
+    @Environment(\.colorScheme) var colorScheme
     var entry: Provider.Entry
     var bgShape: FlowerClockView.ClockShape
     
@@ -73,11 +74,32 @@ struct UCWGextEntryView : View {
             showSeconds: entry.configuration.showsSec == 1,
             showNumbers: entry.configuration.showsNumber == 1,
             shape: bgShape,
-            bordered: entry.configuration._bordered == 1,
+            bordered: entry.configuration.isBordered == 1,
+            bg: colorScheme == .light ? (
+                try? UIImage(
+                    data: Data(contentsOf: URL(
+                        fileURLWithPath: "\(imgPath)/imgB\(entry.configuration.bgPos.rawValue + 0).jpg"
+                    ))
+                ) ?? UIImage(
+                    data: Data(contentsOf: URL(
+                        fileURLWithPath: "\(imgPath)/imgD\(entry.configuration.bgPos.rawValue + 0).jpg"
+                    ))
+                )
+            ) : (
+                try? UIImage(
+                    data: Data(contentsOf: URL(
+                        fileURLWithPath: "\(imgPath)/imgD\(entry.configuration.bgPos.rawValue + 0).jpg"
+                    ))
+                ) ?? UIImage(
+                    data: Data(contentsOf: URL(
+                        fileURLWithPath: "\(imgPath)/imgB\(entry.configuration.bgPos.rawValue + 0).jpg"
+                    ))
+                )
+            ),
             hor: Double(Int(formatter.string(from: entry.date))! / 10000),
             mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
             sec: Double(Int(formatter.string(from: entry.date))! % 100)
-        ).padding().background(Color(UIColor.systemGray6))
+        ).background(Color(UIColor.systemGray6))
     }
 }
 

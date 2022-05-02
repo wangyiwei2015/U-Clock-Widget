@@ -82,8 +82,10 @@ struct ContentView: View {
     func updateWallpaperSave() {
         if let brightImg = bgBright {
             try! brightImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgB.jpg"), options: .atomic)
-            let theme = ColorThief.getColor(from: brightImg)
-            //UserDefaults.standard.set(theme?.makeUIColor(), forKey: "_IMG_COLOR")
+            let theme = ColorThief.getColor(from: brightImg)!
+            var hue: CGFloat = 0
+            theme.makeUIColor().getHue(&hue, saturation: nil, brightness: nil, alpha: nil)
+            UserDefaults.standard.set(Double(hue), forKey: "_IMG_COLOR")
             for pos in 1...9 {
                 let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
                 try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)

@@ -90,11 +90,10 @@ struct ContentView: View {
             }
         }
         if let darkImg = bgDark {
-            UserDefaults.standard.set(darkImg, forKey: "_IMG_D")
+            try! darkImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgD.jpg"), options: .atomic)
             for pos in 1...9 {
                 let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
                 try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
-                //private/var/mobile/Containers/Shared/AppGroup/9BBFC399-81E4-430E-89C2-DBA739700CCC/Documents/img/imgD1.jpg
             }
         }
         print(imgPath)

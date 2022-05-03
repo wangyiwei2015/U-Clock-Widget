@@ -55,7 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4DA546E527F45E7900CD04EF /*   .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "  .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA546E527F45E7900CD04EF /* uclk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uclk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uclockwidgetApp.swift; sourceTree = "<group>"; };
 		4DA546EA27F45E7900CD04EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DA546EC27F45E7A00CD04EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		4DA546E627F45E7900CD04EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DA546E527F45E7900CD04EF /*   .app */,
+				4DA546E527F45E7900CD04EF /* uclk.app */,
 				4DA546FB27F45F9D00CD04EF /* UCWGextExtension.appex */,
 			);
 			name = Products;
@@ -208,7 +208,7 @@
 			);
 			name = uclockwidget;
 			productName = uclockwidget;
-			productReference = 4DA546E527F45E7900CD04EF /*   .app */;
+			productReference = 4DA546E527F45E7900CD04EF /* uclk.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DA546FA27F45F9D00CD04EF /* UCWGextExtension */ = {
@@ -510,7 +510,7 @@
 				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
-				PRODUCT_NAME = "  ";
+				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -546,7 +546,7 @@
 				);
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
-				PRODUCT_NAME = "  ";
+				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -564,7 +564,7 @@
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "  ";
+				INFOPLIST_KEY_CFBundleDisplayName = UClock;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -593,7 +593,7 @@
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "  ";
+				INFOPLIST_KEY_CFBundleDisplayName = UClock;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -17,23 +17,53 @@ struct ContentView: View {
     @State var isPickingLight = true
     @State var showsPicker = false
     
+    @State var showsHelp = false
+    
     var body: some View {
         VStack {
-            FlowerClockView(
-                dateFormat: "EE dd",
-                date: Date(),
-                fingerColorHue: nil,
-                showSeconds: true,
-                showNumbers: true,
-                shape: .flower, bordered: false,
-                hor: 10, mnt: 35, sec: 20
-            )//.frame(width: 300, height: 200)
-            .padding()
+            HStack {
+                Text("UClock Widgets")
+                    .font(.system(size: 24, weight: .semibold))
+                Spacer()
+                Button {
+                    showsHelp = true
+                } label: {
+                    Image(systemName: "info.circle.fill")
+                        .font(.system(size: 30))
+                        .foregroundColor(.gray)
+                }
+            }.padding(.horizontal)
+            ZStack {
+                FlowerClockView(
+                    dateFormat: "EE dd",
+                    date: Date(),
+                    fingerColorHue: nil,
+                    showSeconds: true,
+                    showNumbers: true,
+                    shape: .flower, bordered: false,
+                    hor: 10, mnt: 35, sec: 20
+                )//.frame(width: 300, height: 200)
+                .padding()
+                
+                VStack {
+                    Spacer()
+                    HStack(spacing: 5) {
+                        Image(systemName: "seal")
+                        Image(systemName: "seal.fill")
+                        Image(systemName: "circle")
+                        Image(systemName: "circle.fill")
+                        Spacer()
+                    }
+                    .font(.system(size: 16, weight: .black))
+                    .foregroundColor(Color(UIColor.systemGray4))
+                    .padding(10)
+                }
+            }
             .background(Color(UIColor.systemGray6))
             .frame(height: 250)
             .cornerRadius(20)
-            .padding()
-            Text("U Clock Widgets")
+            .padding([.bottom, .horizontal])
+            
             HStack {
                 Image(uiImage: bgBright ?? UIImage())
                     .resizable()
@@ -61,6 +91,9 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showsPicker, onDismiss: updateWallpaperSave) {
             ImagePicker(img: isPickingLight ? $bgBright : $bgDark)
+        }
+        .sheet(isPresented: $showsHelp) {
+            InfoView()
         }
     }
     

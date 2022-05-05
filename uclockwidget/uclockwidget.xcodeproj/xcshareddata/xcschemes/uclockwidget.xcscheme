@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DA546E427F45E7900CD04EF"
-               BuildableName = "  .app"
+               BuildableName = "uclk.app"
                BlueprintName = "uclockwidget"
                ReferencedContainer = "container:uclockwidget.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DA546E427F45E7900CD04EF"
-            BuildableName = "  .app"
+            BuildableName = "uclk.app"
             BlueprintName = "uclockwidget"
             ReferencedContainer = "container:uclockwidget.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DA546E427F45E7900CD04EF"
-            BuildableName = "  .app"
+            BuildableName = "uclk.app"
             BlueprintName = "uclockwidget"
             ReferencedContainer = "container:uclockwidget.xcodeproj">
          </BuildableReference>

@@ -92,8 +92,8 @@ struct FlowerClockView: View {
                                 Text("6").offset(y: r * 0.5)
                                 Text("9").offset(x: -r * 0.5)
                             }.font(.system(size: r * 0.57, weight: .black, design: .rounded))
-                                .foregroundColor(Color(UIColor.systemGray6))
-                                .opacity(0.5)
+                                .foregroundColor(Color(UIColor.systemGray5))
+                                .opacity(0.55)
                         }
                         
                         if showSeconds {
@@ -101,7 +101,7 @@ struct FlowerClockView: View {
                                 DateText(r)
                                 Spacer()
                                 Circle().fill()
-                                    .foregroundColor(Color(UIColor.systemGray6))
+                                    .foregroundColor(Color(UIColor.systemGray5))
                                     .opacity(0.7)
                                     .frame(width: r * 0.16, height: r * 0.16)
                                     .padding(r * 0.22)

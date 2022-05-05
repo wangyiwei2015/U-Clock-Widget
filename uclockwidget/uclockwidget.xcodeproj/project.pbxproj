@@ -27,6 +27,7 @@
 		4DB16BCF282001B700684B5F /* BackgroundClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */; };
 		4DC8B62D27F59E7D00B7A927 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */; };
 		4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */; };
+		4DC9D1322822160500B614E6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9D1312822160500B614E6 /* InfoView.swift */; };
 		773217DB9A28531A556D9A3B /* Pods_uclockwidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,7 @@
 /* Begin PBXFileReference section */
 		4DA546E527F45E7900CD04EF /* uclk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uclk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uclockwidgetApp.swift; sourceTree = "<group>"; };
-		4DA546EA27F45E7900CD04EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4DA546EA27F45E7900CD04EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4DA546EC27F45E7A00CD04EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA546EF27F45E7A00CD04EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DA546F627F45EC800CD04EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		4DB16BD128200A7200684B5F /* UCWGextExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCWGextExtension.entitlements; sourceTree = "<group>"; };
 		4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; };
+		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
 		B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.release.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				4DA546EE27F45E7A00CD04EF /* Preview Content */,
 				4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */,
 				4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */,
+				4DC9D1312822160500B614E6 /* InfoView.swift */,
 			);
 			path = uclockwidget;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				4DA5471327F46B6600CD04EF /* FlowerClockShape.swift in Sources */,
 				4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */,
 				4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */,
+				4DC9D1322822160500B614E6 /* InfoView.swift in Sources */,
 				4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

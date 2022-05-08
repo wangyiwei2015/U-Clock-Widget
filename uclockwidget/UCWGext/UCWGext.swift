@@ -62,6 +62,21 @@ struct UCWGextEntryView : View {
         return fmt
     }()
     
+    var backgroundImage: UIImage? {
+        if entry.configuration.bgPos == .unknown {return nil}
+        let pos = family == .systemSmall
+            ? entry.configuration.bgPos.rawValue
+            : Int((entry.configuration.bgPos.rawValue + 1) / 2) + 6
+        let pathB = "\(imgPath)/imgB\(pos).jpg"
+        let pathD = "\(imgPath)/imgD\(pos).jpg"
+        let savedImg = (colorScheme == .light)
+            ? try? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathB)))
+                ?? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathD)))
+            : try? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathD)))
+                ?? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathB)))
+        return savedImg ?? nil
+    }
+    
     func tunnedColor(for userColorTheme: ColorTheme, isFirstColor: Bool = true) -> Color {
         switch userColorTheme {
         case .blackwhite: return Color.gray
@@ -102,27 +117,7 @@ struct UCWGextEntryView : View {
             showNumbers: entry.configuration.showsNumber == 1,
             shape: bgShape,
             bordered: entry.configuration.isBordered == 1,
-            bg: colorScheme == .light ? (
-                try? UIImage(
-                    data: Data(contentsOf: URL(
-                        fileURLWithPath: "\(imgPath)/imgB\(entry.configuration.bgPos.rawValue + 0).jpg"
-                    ))
-                ) ?? UIImage(
-                    data: Data(contentsOf: URL(
-                        fileURLWithPath: "\(imgPath)/imgD\(entry.configuration.bgPos.rawValue + 0).jpg"
-                    ))
-                )
-            ) : (
-                try? UIImage(
-                    data: Data(contentsOf: URL(
-                        fileURLWithPath: "\(imgPath)/imgD\(entry.configuration.bgPos.rawValue + 0).jpg"
-                    ))
-                ) ?? UIImage(
-                    data: Data(contentsOf: URL(
-                        fileURLWithPath: "\(imgPath)/imgB\(entry.configuration.bgPos.rawValue + 0).jpg"
-                    ))
-                )
-            ),
+            bg: backgroundImage,
             hor: Double(Int(formatter.string(from: entry.date))! / 10000),
             mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
             sec: Double(Int(formatter.string(from: entry.date))! % 100)
@@ -152,7 +147,7 @@ struct UCWG_Circle: Widget {
         }
         .configurationDisplayName(localized("uclk_circle"))
         .description(localized("widget_desc"))
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
@@ -168,7 +163,7 @@ struct UCWG_Scallop: Widget {
         }
         .configurationDisplayName(localized("uclk_scallop"))
         .description(localized("widget_desc"))
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
@@ -184,7 +179,7 @@ struct UCWG_Clover: Widget {
         }
         .configurationDisplayName(localized("uclk_clover"))
         .description(localized("widget_desc"))
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 

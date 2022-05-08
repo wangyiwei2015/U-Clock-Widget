@@ -14,6 +14,8 @@
 		4D8FB92B2827A2A60072D4C0 /* ContentView+ColorPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB92A2827A2A60072D4C0 /* ContentView+ColorPreview.swift */; };
 		4D8FB92F2827AAEA0072D4C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FB9322827AAEA0072D4C0 /* Localizable.strings */; };
 		4D8FB9302827AAEA0072D4C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FB9322827AAEA0072D4C0 /* Localizable.strings */; };
+		4D8FB9342827C1A30072D4C0 /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9372827C1A30072D4C0 /* UCWGext.intentdefinition */; };
+		4D8FB9352827C1A30072D4C0 /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9372827C1A30072D4C0 /* UCWGext.intentdefinition */; };
 		4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */; };
 		4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA546EA27F45E7900CD04EF /* ContentView.swift */; };
 		4DA546ED27F45E7A00CD04EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA546EC27F45E7A00CD04EF /* Assets.xcassets */; };
@@ -22,8 +24,6 @@
 		4DA5470027F45F9D00CD04EF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA546FF27F45F9D00CD04EF /* SwiftUI.framework */; };
 		4DA5470327F45F9D00CD04EF /* UCWGext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5470227F45F9D00CD04EF /* UCWGext.swift */; };
 		4DA5470627F45F9D00CD04EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA5470527F45F9D00CD04EF /* Assets.xcassets */; };
-		4DA5470827F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */; };
-		4DA5470927F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */; };
 		4DA5470C27F45F9D00CD04EF /* UCWGextExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4DA546FB27F45F9D00CD04EF /* UCWGextExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4DA5471327F46B6600CD04EF /* ScallopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471227F46B6600CD04EF /* ScallopShape.swift */; };
 		4DA5471427F46B6600CD04EF /* ScallopShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471227F46B6600CD04EF /* ScallopShape.swift */; };
@@ -69,6 +69,9 @@
 		4D8FB92A2827A2A60072D4C0 /* ContentView+ColorPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ColorPreview.swift"; sourceTree = "<group>"; };
 		4D8FB9312827AAEA0072D4C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D8FB9332827AAFE0072D4C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4D8FB9362827C1A30072D4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/UCWGext.intentdefinition; sourceTree = "<group>"; };
+		4D8FB9392827C1E80072D4C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UCWGext.strings; sourceTree = "<group>"; };
+		4D8FB93B2827C1E80072D4C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UCWGext.strings"; sourceTree = "<group>"; };
 		4DA546E527F45E7900CD04EF /* uclk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uclk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uclockwidgetApp.swift; sourceTree = "<group>"; };
 		4DA546EA27F45E7900CD04EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -79,7 +82,6 @@
 		4DA546FD27F45F9D00CD04EF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4DA546FF27F45F9D00CD04EF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4DA5470227F45F9D00CD04EF /* UCWGext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCWGext.swift; sourceTree = "<group>"; };
-		4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = UCWGext.intentdefinition; sourceTree = "<group>"; };
 		4DA5470527F45F9D00CD04EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA5470727F45F9D00CD04EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA5471227F46B6600CD04EF /* ScallopShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScallopShape.swift; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA5470227F45F9D00CD04EF /* UCWGext.swift */,
-				4DA5470427F45F9D00CD04EF /* UCWGext.intentdefinition */,
+				4D8FB9372827C1A30072D4C0 /* UCWGext.intentdefinition */,
 				4DA5470527F45F9D00CD04EF /* Assets.xcassets */,
 				4DA5470727F45F9D00CD04EF /* Info.plist */,
 			);
@@ -359,7 +361,7 @@
 				4D8FB9232826AFD00072D4C0 /* CloverShape.swift in Sources */,
 				4DA5471627F4A2D900CD04EF /* Utils.swift in Sources */,
 				4D8FB9292826D35E0072D4C0 /* ContentView+Crop.swift in Sources */,
-				4DA5470927F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */,
+				4D8FB9342827C1A30072D4C0 /* UCWGext.intentdefinition in Sources */,
 				4DA5471927F4A36C00CD04EF /* ClockView.swift in Sources */,
 				4DC8B62D27F59E7D00B7A927 /* ImagePicker.swift in Sources */,
 				4DA5471327F46B6600CD04EF /* ScallopShape.swift in Sources */,
@@ -378,7 +380,7 @@
 			files = (
 				4D8FB9242826AFD60072D4C0 /* CloverShape.swift in Sources */,
 				4DA5471427F46B6600CD04EF /* ScallopShape.swift in Sources */,
-				4DA5470827F45F9D00CD04EF /* UCWGext.intentdefinition in Sources */,
+				4D8FB9352827C1A30072D4C0 /* UCWGext.intentdefinition in Sources */,
 				4DA5470327F45F9D00CD04EF /* UCWGext.swift in Sources */,
 				4DB16BCF282001B700684B5F /* BackgroundClip.swift in Sources */,
 				4DA5471A27F4A36C00CD04EF /* ClockView.swift in Sources */,
@@ -404,6 +406,16 @@
 				4D8FB9332827AAFE0072D4C0 /* zh-Hans */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4D8FB9372827C1A30072D4C0 /* UCWGext.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D8FB9362827C1A30072D4C0 /* Base */,
+				4D8FB9392827C1E80072D4C0 /* en */,
+				4D8FB93B2827C1E80072D4C0 /* zh-Hans */,
+			);
+			name = UCWGext.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -534,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -552,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -570,7 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -588,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -604,7 +616,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -616,7 +628,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -633,7 +645,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -645,7 +657,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

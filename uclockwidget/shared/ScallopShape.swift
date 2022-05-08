@@ -1,5 +1,5 @@
 //
-//  FlowerClockShape.swift
+//  ScallopClockShape.swift
 //  uclockwidget
 //
 //  Created by wyw on 2022/3/30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlowerClockShape: Shape {
+struct ScallopShape: Shape {
     func path(in rect: CGRect) -> Path {
         let squareWidth = min(rect.width, rect.height)
         let centerOffset = rect.size / 2
@@ -31,14 +31,6 @@ struct FlowerClockShape: Shape {
                     ) + centerOffset
                 )
             }
-        }
-    }
-}
-
-struct FlowerClockShape_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            FlowerClockShape().fill().foregroundColor(.gray)
         }
     }
 }

@@ -26,3 +26,4 @@ func +(lhs: CGPoint, rhs: CGSize) -> CGPoint {
 }
 
 let imgPath = "\(FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.wyw.uclock")!.path)/Documents/img"
+let ud = UserDefaults(suiteName: "group.com.wyw.uclock")!

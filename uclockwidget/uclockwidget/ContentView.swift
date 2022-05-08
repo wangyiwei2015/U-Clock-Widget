@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ColorThiefSwift
 
 struct ContentView: View {
     @State var hor: Int = 0
@@ -16,11 +15,38 @@ struct ContentView: View {
     
     @State var isPickingLight = true
     @State var showsPicker = false
-    
     @State var showsHelp = false
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var firstColorLight: Color = {
+        if let savedColor = ud.object(forKey: "_IMG_COLOR_LIGHT_1")
+            as? [CGFloat] {
+            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+        } else {return .gray}
+    }()
+    @State var secondColorLight: Color = {
+        if let savedColor = ud.object(forKey: "_IMG_COLOR_LIGHT_2")
+            as? [CGFloat] {
+            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+        } else {return .gray}
+    }()
+    @State var firstColorDark: Color = {
+        if let savedColor = ud.object(forKey: "_IMG_COLOR_DARK_1")
+            as? [CGFloat] {
+            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+        } else {return .gray}
+    }()
+    @State var secondColorDark: Color = {
+        if let savedColor = ud.object(forKey: "_IMG_COLOR_DARK_2")
+            as? [CGFloat] {
+            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+        } else {return .gray}
+    }()
     
     var body: some View {
         VStack {
+            //Title
             HStack {
                 Text("UClock Widgets")
                     .font(.system(size: 24, weight: .semibold))
@@ -33,62 +59,42 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }
             }.padding(.horizontal)
+            
+            //Clock
             ZStack {
-                FlowerClockView(
+                UClockView(
                     dateFormat: "EE dd",
                     date: Date(),
-                    fingerColorHue: nil,
-                    showSeconds: true,
+                    firstColor: colorScheme == .light ? firstColorLight : firstColorDark,
+                    secondColor: colorScheme == .light ? secondColorLight : secondColorDark,
+                    showSeconds: false,
                     showNumbers: true,
-                    shape: .flower, bordered: false,
-                    hor: 10, mnt: 35, sec: 20
+                    shape: .scallop, bordered: false,
+                    hor: 10, mnt: 8, sec: 30
                 )//.frame(width: 300, height: 200)
                 .padding()
                 
                 VStack {
                     Spacer()
-                    HStack(spacing: 5) {
-                        Image(systemName: "seal")
-                        Image(systemName: "seal.fill")
-                        Image(systemName: "circle")
-                        Image(systemName: "circle.fill")
-                        Spacer()
-                    }
-                    .font(.system(size: 16, weight: .black))
-                    .foregroundColor(Color(UIColor.systemGray4))
-                    .padding(10)
+                    SmallShpaeIcons
                 }
             }
             .background(Color(UIColor.systemGray6))
-            .frame(height: 250)
-            .cornerRadius(20)
+            .frame(height: 250).cornerRadius(20)
             .padding([.bottom, .horizontal])
             
+            //Previews
+            ColorPreviews.frame(height: 30)
+            
+            //Wallpapers
             HStack {
-                Image(uiImage: bgBright ?? UIImage())
-                    .resizable()
-                    .aspectRatio(UIScreen.main.bounds.width / UIScreen.main.bounds.height, contentMode: .fit)
-                    .overlay(AutoPlusSymbol(for: bgBright))
-                    .background(Color(white: 0.9))
-                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .onTapGesture {
-                        isPickingLight = true
-                        setWallpaper()
-                    }
-                    .padding()
-                Image(uiImage: bgDark ?? UIImage())
-                    .resizable()
-                    .aspectRatio(UIScreen.main.bounds.width / UIScreen.main.bounds.height, contentMode: .fit)
-                    .overlay(AutoPlusSymbol(for: bgDark))
-                    .background(Color(white: 0.3))
-                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .onTapGesture {
-                        isPickingLight = false
-                        setWallpaper()
-                    }
-                    .padding()
-            }.padding()
+                LightModeWallpaper
+                DarkModeWallpaper
+            }.padding([.bottom, .horizontal])
+            
         }
+        .padding(10)
+        //Navigation
         .sheet(isPresented: $showsPicker, onDismiss: updateWallpaperSave) {
             ImagePicker(img: isPickingLight ? $bgBright : $bgDark)
         }
@@ -97,42 +103,7 @@ struct ContentView: View {
         }
     }
     
-    @ViewBuilder func AutoPlusSymbol(for object: UIImage?) -> some View {
-        if object == nil {
-            VStack {
-                Image(systemName: "plus.circle")
-                    .font(.system(size: 40, weight: .regular, design: .monospaced))
-                    .foregroundColor(.gray)
-                Text("Wallpaper")
-                    .foregroundColor(.gray)
-                    .padding(.top, 5)
-            }
-        } else {Spacer()}
-    }
-    
     func setWallpaper() {showsPicker = true}
-    
-    func updateWallpaperSave() {
-        if let brightImg = bgBright {
-            try! brightImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgB.jpg"), options: .atomic)
-            let theme = ColorThief.getColor(from: brightImg)!
-            var hue: CGFloat = 0
-            theme.makeUIColor().getHue(&hue, saturation: nil, brightness: nil, alpha: nil)
-            UserDefaults.standard.set(Double(hue), forKey: "_IMG_COLOR")
-            for pos in 1...9 {
-                let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
-                try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
-            }
-        }
-        if let darkImg = bgDark {
-            try! darkImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgD.jpg"), options: .atomic)
-            for pos in 1...9 {
-                let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
-                try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
-            }
-        }
-        print(imgPath)
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

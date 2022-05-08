@@ -190,16 +190,6 @@
 				</dict>
 				<dict>
 					<key>INEnumValueDisplayName</key>
-					<string>voilet</string>
-					<key>INEnumValueDisplayNameID</key>
-					<string>JpLAFt</string>
-					<key>INEnumValueIndex</key>
-					<integer>9</integer>
-					<key>INEnumValueName</key>
-					<string>voilet</string>
-				</dict>
-				<dict>
-					<key>INEnumValueDisplayName</key>
 					<string>pink</string>
 					<key>INEnumValueDisplayNameID</key>
 					<string>GMg6iZ</string>
@@ -228,9 +218,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>21E258</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>13E113</string>
+	<string>13E500a</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>13.3</string>
+	<string>13.3.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>

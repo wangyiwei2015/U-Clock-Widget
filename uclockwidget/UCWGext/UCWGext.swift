@@ -54,16 +54,59 @@ struct UCWGextEntryView : View {
     @Environment(\.widgetFamily) var family: WidgetFamily
     @Environment(\.colorScheme) var colorScheme
     var entry: Provider.Entry
-    var bgShape: FlowerClockView.ClockShape
+    var bgShape: UClockView.ClockShape
     
     let formatter: DateFormatter = {
         let fmt = DateFormatter()
         fmt.dateFormat = "HHmmss"
         return fmt
     }()
-    let colorHues: [Double?] = [
-        nil, UserDefaults.standard.double(forKey: "_IMG_COLOR"), 0, 0.05, 0.11, 0.32, 0.5, 0.6, 0.73, 0.78, 0.88, nil
-    ]
+//    let colorHues: [Double?] = [
+//        nil, UserDefaults.standard.double(forKey: "_IMG_COLOR"), 0, 0.05, 0.11, 0.32, 0.5, 0.6, 0.73, 0.78, 0.88, nil
+//    ]
+    
+    func tunnedColor(for userColorTheme: ColorTheme, isFirstColor: Bool = true) -> Color {
+        switch userColorTheme {
+        case .blackwhite: return Color.gray
+        case .auto:
+            if isFirstColor {
+                if let savedColor = ud.object(
+                    forKey: colorScheme == .light ? "_IMG_COLOR_LIGHT_1" : "_IMG_COLOR_DARK_1"
+                ) as? [CGFloat] {
+                    return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+                } else {return Color.gray}
+            } else {
+                if let savedColor = ud.object(
+                    forKey: colorScheme == .light ? "_IMG_COLOR_LIGHT_2" : "_IMG_COLOR_DARK_2"
+                ) as? [CGFloat] {
+                    return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+                } else {return Color.gray}
+            }
+        case .red: return Color.red
+        case .orange: return Color.orange
+        case .yellow: return Color.yellow
+        case .green: return Color.green
+        case .cyan: return Color.cyan
+        case .blue: return Color.blue
+        case .purple: return Color.purple
+        case .pink: return Color.pink
+        case .unknown: return Color.gray
+        }
+    }
+    
+//    var lightAutoColor: Color {
+//        if let savedColor = UserDefaults.standard.object(
+//            forKey: "_IMG_COLOR_LIGHT") as? [CGFloat] {
+//            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+//        } else {return Color.gray}
+//    }
+//
+//    var darkAutoColor: Color {
+//        if let savedColor = UserDefaults.standard.object(
+//            forKey: "_IMG_COLOR_DARK") as? [CGFloat] {
+//            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
+//        } else {return Color.gray}
+//    }
 
     @ViewBuilder
     var body: some View {
@@ -76,10 +119,17 @@ struct UCWGextEntryView : View {
 //            Text(entry.date, style: .time)
 //        default: fatalError()
 //        }
-        FlowerClockView(
+        UClockView(
             dateFormat: entry.configuration.dateFormat,
             date: entry.date,
-            fingerColorHue: colorHues[entry.configuration.colorTheme.rawValue],
+            //fingerColorHue: colorHues[entry.configuration.colorTheme.rawValue],
+            //themeColor: tunnedColor(for: entry.configuration.colorTheme),
+//                entry.configuration.colorTheme == .auto
+//                ? (colorScheme == .light
+//                   ? lightAutoColor : darkAutoColor)
+//                : tunnedColor(for: entry.configuration.colorTheme),
+            firstColor: tunnedColor(for: entry.configuration.colorTheme),
+            secondColor: tunnedColor(for: entry.configuration.colorTheme, isFirstColor: false),
             showSeconds: entry.configuration.showsSec == 1,
             showNumbers: entry.configuration.showsNumber == 1,
             shape: bgShape,
@@ -116,46 +166,63 @@ struct UCWGextEntryView : View {
 struct UCWGext: WidgetBundle {
     @WidgetBundleBuilder
     var body: some Widget {
-        UCWG_Rounded()
-        UCWG_Flower()
+        UCWG_Scallop()
+        UCWG_Circle()
+        UCWG_Clover()
     }
 }
 
-struct UCWG_Rounded: Widget {
-    let kind: String = "com.wyw.uclock.widget.rounded"
+struct UCWG_Circle: Widget {
+    let kind: String = "com.wyw.uclock.widget.circle"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(
             kind: kind, intent: ConfigurationIntent.self,
             provider: Provider()
         ) { entry in
-            UCWGextEntryView(entry: entry, bgShape: .rounded)
+            UCWGextEntryView(entry: entry, bgShape: .circle)
         }
-        .configurationDisplayName("Rounded Clock")
-        .description("Material styled clock widget")
+        .configurationDisplayName("Clock (Circle)")
+        .description("Material style clock widget")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
-struct UCWG_Flower: Widget {
-    let kind: String = "com.wyw.uclock.widget.flower"
+struct UCWG_Scallop: Widget {
+    let kind: String = "com.wyw.uclock.widget.scallop"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(
             kind: kind, intent: ConfigurationIntent.self,
             provider: Provider()
         ) { entry in
-            UCWGextEntryView(entry: entry, bgShape: .flower)
+            UCWGextEntryView(entry: entry, bgShape: .scallop)
         }
-        .configurationDisplayName("Flower Clock")
-        .description("Material styled clock widget")
+        .configurationDisplayName("UClock (Scallop)")
+        .description("Material style clock widget")
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
+    }
+}
+
+struct UCWG_Clover: Widget {
+    let kind: String = "com.wyw.uclock.widget.clover"
+
+    var body: some WidgetConfiguration {
+        IntentConfiguration(
+            kind: kind, intent: ConfigurationIntent.self,
+            provider: Provider()
+        ) { entry in
+            UCWGextEntryView(entry: entry, bgShape: .clover)
+        }
+        .configurationDisplayName("UClock (Clover)")
+        .description("Material style clock widget")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
 struct UCWGext_Previews: PreviewProvider {
     static var previews: some View {
-        UCWGextEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()), bgShape: .flower)
+        UCWGextEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()), bgShape: .scallop)
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

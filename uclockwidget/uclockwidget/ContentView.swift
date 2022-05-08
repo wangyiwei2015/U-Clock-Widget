@@ -99,7 +99,10 @@ struct ContentView: View {
             ImagePicker(img: isPickingLight ? $bgBright : $bgDark)
         }
         .sheet(isPresented: $showsHelp) {
-            InfoView()
+            InfoView(
+                firstColor: colorScheme == .light ? $firstColorLight : $firstColorDark,
+                secondColor: colorScheme == .light ? $secondColorLight : $secondColorDark
+            )
         }
     }
     

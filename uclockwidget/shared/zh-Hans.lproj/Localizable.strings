@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  uclockwidget
+
+  Created by wyw on 2022/5/8.
+  
+*/
+
+// ContentView
+"UClock Widgets" "UClock 小组件";
+
+// InfoView
+"Info & Help" = "帮助/关于";
+"Setting the wallpaper" = "设置壁纸";
+"1. Go to home screen" = "1、前往主屏幕";
+"2. Enter edit mode" = "2、长按进入编辑模式";
+"3. Swipe to a new empty page" = "3、划到最右的空白页面";
+"4. Take a screenshot" = "4、截图";
+"5. Repeat for light/dark mode" = "5、若亮/暗模式壁纸不同，则需分别截图";
+"6. Come back and choose them" = "6、返回本应用选择刚才的截图";
+
+// Widget Ext
+"Material style clock widget" = "Material 风格时钟小组件";
+"UClock (Circle)" = "UClock (圆形)";
+"UClock (Scallop)" = "UClock (扇形)";
+"UClock (Clover)" = "UClock (四叶草)";

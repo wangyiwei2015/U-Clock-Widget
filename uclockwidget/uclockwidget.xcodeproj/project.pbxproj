@@ -12,6 +12,8 @@
 		4D8FB9242826AFD60072D4C0 /* CloverShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9222826AFD00072D4C0 /* CloverShape.swift */; };
 		4D8FB9292826D35E0072D4C0 /* ContentView+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9282826D35E0072D4C0 /* ContentView+Crop.swift */; };
 		4D8FB92B2827A2A60072D4C0 /* ContentView+ColorPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB92A2827A2A60072D4C0 /* ContentView+ColorPreview.swift */; };
+		4D8FB92F2827AAEA0072D4C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FB9322827AAEA0072D4C0 /* Localizable.strings */; };
+		4D8FB9302827AAEA0072D4C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FB9322827AAEA0072D4C0 /* Localizable.strings */; };
 		4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */; };
 		4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA546EA27F45E7900CD04EF /* ContentView.swift */; };
 		4DA546ED27F45E7A00CD04EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA546EC27F45E7A00CD04EF /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		4D8FB9222826AFD00072D4C0 /* CloverShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverShape.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4D8FB9282826D35E0072D4C0 /* ContentView+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Crop.swift"; sourceTree = "<group>"; };
 		4D8FB92A2827A2A60072D4C0 /* ContentView+ColorPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ColorPreview.swift"; sourceTree = "<group>"; };
+		4D8FB9312827AAEA0072D4C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D8FB9332827AAFE0072D4C0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4DA546E527F45E7900CD04EF /* uclk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uclk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA546E827F45E7900CD04EF /* uclockwidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uclockwidgetApp.swift; sourceTree = "<group>"; };
 		4DA546EA27F45E7900CD04EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -190,6 +194,7 @@
 				4DA5471227F46B6600CD04EF /* ScallopShape.swift */,
 				4D8FB9222826AFD00072D4C0 /* CloverShape.swift */,
 				4DA5471527F4A2D900CD04EF /* Utils.swift */,
+				4D8FB9322827AAEA0072D4C0 /* Localizable.strings */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 4DA546DC27F45E7900CD04EF;
 			productRefGroup = 4DA546E627F45E7900CD04EF /* Products */;
@@ -287,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA546F027F45E7A00CD04EF /* Preview Assets.xcassets in Resources */,
+				4D8FB92F2827AAEA0072D4C0 /* Localizable.strings in Resources */,
 				4DA546ED27F45E7A00CD04EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA5470627F45F9D00CD04EF /* Assets.xcassets in Resources */,
+				4D8FB9302827AAEA0072D4C0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +396,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4D8FB9322827AAEA0072D4C0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D8FB9312827AAEA0072D4C0 /* en */,
+				4D8FB9332827AAFE0072D4C0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4DA546F127F45E7A00CD04EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -453,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -512,7 +534,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -530,7 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -548,7 +570,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -566,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -582,7 +604,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -594,7 +616,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -611,7 +633,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -623,7 +645,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

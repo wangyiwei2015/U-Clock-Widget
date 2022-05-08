@@ -182,8 +182,8 @@ struct UCWG_Circle: Widget {
         ) { entry in
             UCWGextEntryView(entry: entry, bgShape: .circle)
         }
-        .configurationDisplayName("Clock (Circle)")
-        .description("Material style clock widget")
+        .configurationDisplayName(localized("UClock (Circle)"))
+        .description(localized("Material style clock widget"))
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
@@ -198,8 +198,8 @@ struct UCWG_Scallop: Widget {
         ) { entry in
             UCWGextEntryView(entry: entry, bgShape: .scallop)
         }
-        .configurationDisplayName("UClock (Scallop)")
-        .description("Material style clock widget")
+        .configurationDisplayName(localized("UClock (Scallop)"))
+        .description(localized("Material style clock widget"))
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
@@ -214,8 +214,8 @@ struct UCWG_Clover: Widget {
         ) { entry in
             UCWGextEntryView(entry: entry, bgShape: .clover)
         }
-        .configurationDisplayName("UClock (Clover)")
-        .description("Material style clock widget")
+        .configurationDisplayName(localized("UClock (Clover)"))
+        .description(localized("Material style clock widget"))
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }

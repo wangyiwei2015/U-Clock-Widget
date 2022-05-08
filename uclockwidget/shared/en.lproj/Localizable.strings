@@ -6,3 +6,33 @@
   
 */
 
+// ContentView
+"UClock Widgets" = "UClock 小组件";
+
+// InfoView
+"info_title" = "Info & Help";
+"set_wall" = "Setting the wallpaper";
+"sw1" = "1. Go to home screen";
+"sw2" = "2. Enter edit mode";
+"sw3" = "3. Swipe to a new empty page";
+"sw4" = "4. Take a screenshot";
+"sw5" = "5. Repeat for light/dark mode";
+"sw6" = "6. Come back and choose them";
+
+"open_source" = "Open-source Usage";
+"transparent" = "Transparent widget effect";
+"colorext" = "Wallpaper color extractor";
+
+"about" = "About";
+"project_info" = "This is an open-source project.";
+"link_github" = "View sources on GitHub ↗";
+"rate_text" = "Rate or share the app if you like it.";
+"link_appstore" = "View on App Store ↗";
+"contact_text" = "For support or any other questions, feel free to contact me";
+"link_email" = "Send email to the developer ↗";
+
+// Widget Ext
+"widget_desc" = "Material style clock widget";
+"uclk_circle" = "UClock (Circle)";
+"uclk_scallop" = "UClock (Scallop)";
+"uclk_clover" = "UClock (Clover)";

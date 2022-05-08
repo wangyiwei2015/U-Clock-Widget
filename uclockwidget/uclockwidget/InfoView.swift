@@ -15,7 +15,7 @@ struct InfoView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Info & Help")
+                Text("info_title")
                     .font(.system(size: 24, weight: .semibold))
                     .foregroundColor(secondColor)
                     .shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
@@ -29,16 +29,45 @@ struct InfoView: View {
                 }
             }.padding()
             ScrollView(.vertical, showsIndicators: true) {
-                VStack(alignment: .leading, spacing: 10) {
+                VStack {
                     Group {
-                        LeftLabel("square.on.square.dashed", "Setting the wallpaper")
-                        Text("1. Go to home screen").padding(.leading)
-                        Text("2. Enter edit mode").padding(.leading)
-                        Text("3. Swipe to a new empty page").padding(.leading)
-                        Text("4. Take a screenshot").padding(.leading)
-                        Text("5. Repeat for light/dark mode").padding(.leading)
-                        Text("6. Come back and choose them").padding(.leading)
-                    }.font(.system(size: 18, weight: .semibold, design: .rounded))
+                        VStack(alignment: .leading, spacing: 10) {
+                            LeftLabel("square.on.square.dashed", localized("set_wall"))
+                            Text("sw1").padding(.leading)
+                            Text("sw2").padding(.leading)
+                            Text("sw3").padding(.leading)
+                            Text("sw4").padding(.leading)
+                            Text("sw5").padding(.leading)
+                            Text("sw6").padding(.leading)
+                        }.font(.system(size: 20, weight: .regular))
+                    }.padding(.bottom)
+                    
+                    Group {
+                        VStack(alignment: .leading, spacing: 10) {
+                            LeftLabel("chevron.left.forwardslash.chevron.right", localized("open_source"))
+                            Text("transparent").padding(.leading)
+                            Link("zhangyu1818 / clocks-widget ↗", destination: URL(string: "https://github.com/zhangyu1818/clocks-widget")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                            Text("colorext").padding(.leading)
+                            Link("yamoridon / ColorThiefSwift ↗", destination: URL(string: "https://github.com/yamoridon/ColorThiefSwift")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                        }.font(.system(size: 20, weight: .regular))
+                    }.padding(.bottom)
+                    
+                    Group {
+                        VStack(alignment: .leading, spacing: 10) {
+                            LeftLabel("info.circle", localized("about"))
+                            Text("project_info").padding(.leading)
+                            Link("link_github", destination: URL(string: "https://github.com/wangyiwei2015/U-Clock-Widget")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                            Text("rate_text").padding(.leading)
+                            Link("link_appstore", destination: URL(string: "itms-apps://itunes.apple.com/cn/app/1622170600")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                            Text("contact_text").padding(.leading)
+                            Link("link_email", destination: URL(string: "mailto:wanyw.dev@outlook.com?subject=UClock%20Feedback")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                        }.font(.system(size: 20, weight: .regular))
+                    }.padding(.bottom)
                     
                 }.padding()
             }

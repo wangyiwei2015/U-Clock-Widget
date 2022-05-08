@@ -82,6 +82,7 @@ struct ContentView: View {
             .background(Color(UIColor.systemGray6))
             .frame(height: 250).cornerRadius(20)
             .padding([.bottom, .horizontal])
+            .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 4, y: 3)
             
             //Previews
             ColorPreviews.frame(height: 30)
@@ -89,7 +90,9 @@ struct ContentView: View {
             //Wallpapers
             HStack {
                 LightModeWallpaper
+                    .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
                 DarkModeWallpaper
+                    .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
             }.padding([.bottom, .horizontal])
             
         }

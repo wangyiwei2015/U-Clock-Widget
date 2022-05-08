@@ -10,17 +10,29 @@
 "UClock Widgets" = "UClock 小组件";
 
 // InfoView
-"Info & Help" = "帮助/关于";
-"Setting the wallpaper" = "设置壁纸";
-"1. Go to home screen" = "1、前往主屏幕";
-"2. Enter edit mode" = "2、长按进入编辑模式";
-"3. Swipe to a new empty page" = "3、划到最右的空白页面";
-"4. Take a screenshot" = "4、截图";
-"5. Repeat for light/dark mode" = "5、若亮/暗模式壁纸不同，则需分别截图";
-"6. Come back and choose them" = "6、返回本应用选择刚才的截图";
+"info_title" = "帮助/关于";
+"set_wall" = "设置壁纸";
+"sw1" = "1、前往主屏幕";
+"sw2" = "2、长按进入编辑模式";
+"sw3" = "3、划到最右的空白页面";
+"sw4" = "4、截图";
+"sw5" = "5、若亮/暗模式壁纸不同，则需分别截图";
+"sw6" = "6、返回本应用选择刚才的截图";
+
+"open_source" = "开源代码使用";
+"transparent" = "小组件透明背景效果";
+"colorext" = "壁纸颜色提取";
+
+"about" = "关于此应用";
+"project_info" = "这是一个开源项目。";
+"link_github" = "前往 GitHub 页面 ↗";
+"rate_text" = "如果你喜欢本应用，欢迎五星好评或分享给别人。";
+"link_appstore" = "前往 App Store ↗";
+"contact_text" = "如需帮助或者有任何问题，欢迎联系我。";
+"link_email" = "给开发者发邮件 ↗";
 
 // Widget Ext
-"Material style clock widget" = "Material 风格时钟小组件";
-"UClock (Circle)" = "UClock (圆形)";
-"UClock (Scallop)" = "UClock (扇形)";
-"UClock (Clover)" = "UClock (四叶草)";
+"widget_desc" = "Material 风格时钟小组件";
+"uclk_circle" = "UClock (圆形)";
+"uclk_scallop" = "UClock (扇形)";
+"uclk_clover" = "UClock (四叶草)";

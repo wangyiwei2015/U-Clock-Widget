@@ -61,9 +61,6 @@ struct UCWGextEntryView : View {
         fmt.dateFormat = "HHmmss"
         return fmt
     }()
-//    let colorHues: [Double?] = [
-//        nil, UserDefaults.standard.double(forKey: "_IMG_COLOR"), 0, 0.05, 0.11, 0.32, 0.5, 0.6, 0.73, 0.78, 0.88, nil
-//    ]
     
     func tunnedColor(for userColorTheme: ColorTheme, isFirstColor: Bool = true) -> Color {
         switch userColorTheme {
@@ -93,41 +90,12 @@ struct UCWGextEntryView : View {
         case .unknown: return Color.gray
         }
     }
-    
-//    var lightAutoColor: Color {
-//        if let savedColor = UserDefaults.standard.object(
-//            forKey: "_IMG_COLOR_LIGHT") as? [CGFloat] {
-//            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
-//        } else {return Color.gray}
-//    }
-//
-//    var darkAutoColor: Color {
-//        if let savedColor = UserDefaults.standard.object(
-//            forKey: "_IMG_COLOR_DARK") as? [CGFloat] {
-//            return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
-//        } else {return Color.gray}
-//    }
 
     @ViewBuilder
     var body: some View {
-//        switch family {
-//        case .systemSmall:
-//            Text(entry.date, style: .time)
-//        case .systemMedium:
-//            Text(entry.date, style: .time)
-//        case .systemLarge:
-//            Text(entry.date, style: .time)
-//        default: fatalError()
-//        }
         UClockView(
             dateFormat: entry.configuration.dateFormat,
             date: entry.date,
-            //fingerColorHue: colorHues[entry.configuration.colorTheme.rawValue],
-            //themeColor: tunnedColor(for: entry.configuration.colorTheme),
-//                entry.configuration.colorTheme == .auto
-//                ? (colorScheme == .light
-//                   ? lightAutoColor : darkAutoColor)
-//                : tunnedColor(for: entry.configuration.colorTheme),
             firstColor: tunnedColor(for: entry.configuration.colorTheme),
             secondColor: tunnedColor(for: entry.configuration.colorTheme, isFirstColor: false),
             showSeconds: entry.configuration.showsSec == 1,

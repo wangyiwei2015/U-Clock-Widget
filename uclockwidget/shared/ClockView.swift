@@ -10,8 +10,7 @@ import SwiftUI
 struct UClockView: View {
     var dateFormat: String?
     var date: Date
-    //var backgroundColor: Color
-    var fingerColorHue: Double? //nil for b&w
+    
     var firstColor: Color = Color.primary
     var secondColor: Color = Color.primary
     
@@ -26,7 +25,6 @@ struct UClockView: View {
     var sec: Double
     
     enum ClockShape: Int {
-        //case rounded, roundedBorder, flower, flowerBorder
         case circle, scallop, clover
     }
     
@@ -189,7 +187,6 @@ struct FlowerClockView_Previews: PreviewProvider {
         UClockView(
             dateFormat: nil,
             date: Date(),
-            fingerColorHue: nil,
             firstColor: Color.red,
             secondColor: Color.blue,
             showSeconds: true,

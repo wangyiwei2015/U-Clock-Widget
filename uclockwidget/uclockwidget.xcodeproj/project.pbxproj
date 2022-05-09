@@ -91,7 +91,7 @@
 		4DB16BD128200A7200684B5F /* UCWGextExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCWGextExtension.entitlements; sourceTree = "<group>"; };
 		4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; };
-		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
 		B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.release.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.release.xcconfig"; sourceTree = "<group>"; };

@@ -47,10 +47,10 @@ struct InfoView: View {
                             LeftLabel("chevron.left.forwardslash.chevron.right", localized("open_source"))
                             Text("transparent").padding(.leading)
                             Link("zhangyu1818 / clocks-widget ↗", destination: URL(string: "https://github.com/zhangyu1818/clocks-widget")!)
-                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 01)
                             Text("colorext").padding(.leading)
                             Link("yamoridon / ColorThiefSwift ↗", destination: URL(string: "https://github.com/yamoridon/ColorThiefSwift")!)
-                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 1)
                         }.font(.system(size: 20, weight: .regular))
                     }.padding(.bottom)
                     
@@ -59,16 +59,23 @@ struct InfoView: View {
                             LeftLabel("info.circle", localized("about"))
                             Text("project_info").padding(.leading)
                             Link("link_github", destination: URL(string: "https://github.com/wangyiwei2015/U-Clock-Widget")!)
-                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 1)
                             Text("rate_text").padding(.leading)
-                            Link("link_appstore", destination: URL(string: "itms-apps://itunes.apple.com/cn/app/1622170600")!)
-                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                            Link("link_appstore", destination: URL(string: "itms-apps://itunes.apple.com/cn/app/id1622170600")!)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 1)
                             Text("contact_text").padding(.leading)
                             Link("link_email", destination: URL(string: "mailto:wanyw.dev@outlook.com?subject=UClock%20Feedback")!)
-                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+                                .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 1)
                         }.font(.system(size: 20, weight: .regular))
                     }.padding(.bottom)
                     
+                    HStack {
+                        Text("v\(ver)(\(build))")
+                        Image(systemName: "swift")
+                        Text("SwiftUI")
+                    }.font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(.gray)
+                        .padding(.top)
                 }.padding()
             }
         }
@@ -83,9 +90,12 @@ struct InfoView: View {
             Spacer()
         }.font(.system(size: 24, weight: .semibold))
         .foregroundColor(firstColor)
-        .shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 1)
+        .shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 2)
     }
 }
+
+let ver = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String? ?? "0"
+let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String? ?? "0"
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {

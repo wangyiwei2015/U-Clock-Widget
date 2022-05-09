@@ -82,7 +82,7 @@ struct ContentView: View {
                         SmallShpaeIcons
                     }
                 }
-                .background(Color(UIColor.systemGray6))
+                .background(Color(UIColor.systemBackground))//systemGray6))
                 .frame(height: 250).cornerRadius(20)
                 .padding([.bottom, .horizontal])
                 .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 4, y: 3)

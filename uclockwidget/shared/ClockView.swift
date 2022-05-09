@@ -38,6 +38,13 @@ struct UClockView: View {
     let shadowColor = Color(UIColor(white: 0, alpha: 0.4))
     
     var bgColor: Color {
+        let mainOpacity: CGFloat = 0.1
+        let mainComp = firstColor.cgColor!.components! * mainOpacity
+        let bgComp = [CGFloat]([1,1,1]) * (1 - mainOpacity)
+        return Color(red: (mainComp[0] + bgComp[0]),
+              green: (mainComp[1] + bgComp[1]),
+              blue: (mainComp[2] + bgComp[2])
+        )
         return Color(UIColor.systemBackground)
     }
     
@@ -62,7 +69,7 @@ struct UClockView: View {
                                         radius: 4, y: 2
                                     )
                             } else {
-                                Circle().strokeBorder(lineWidth: r * 0.1)
+                                Circle().stroke(lineWidth: r * 0.1)
                             }
                         case .scallop:
                             if !bordered {
@@ -180,6 +187,10 @@ struct UClockView: View {
             .foregroundColor(firstColor)
             .padding(r * 0.22)
     }
+}
+
+func *(_ lhs: [CGFloat], _ rhs: CGFloat) -> [CGFloat] {
+    lhs.map({$0 * rhs})
 }
 
 struct FlowerClockView_Previews: PreviewProvider {

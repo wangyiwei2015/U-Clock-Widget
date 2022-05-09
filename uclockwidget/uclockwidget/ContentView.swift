@@ -16,6 +16,8 @@ struct ContentView: View {
     @State var isPickingLight = true
     @State var showsPicker = false
     @State var showsHelp = false
+    @State var launchedBefore = UserDefaults.standard.bool(forKey: "_LAUNCHED")
+    @State var isiPad: Bool = UIDevice.current.userInterfaceIdiom != .phone
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -45,59 +47,80 @@ struct ContentView: View {
     }()
     
     var body: some View {
-        VStack {
-            //Title
-            HStack {
-                Text("UClock Widgets")
-                    .font(.system(size: 24, weight: .semibold))
-                Spacer()
-                Button {
-                    showsHelp = true
-                } label: {
-                    Image(systemName: "info.circle.fill")
-                        .font(.system(size: 30))
-                        .foregroundColor(.gray)
-                }
-            }.padding(.horizontal)
-            
-            //Clock
-            ZStack {
-                UClockView(
-                    dateFormat: "EE dd",
-                    date: Date(),
-                    firstColor: colorScheme == .light ? firstColorLight : firstColorDark,
-                    secondColor: colorScheme == .light ? secondColorLight : secondColorDark,
-                    showSeconds: false,
-                    showNumbers: true,
-                    shape: .scallop, bordered: false,
-                    hor: 10, mnt: 8, sec: 30
-                )//.frame(width: 300, height: 200)
-                .padding()
-                
-                VStack {
+        ZStack {
+            VStack {
+                //Title
+                HStack {
+                    Text("UClock Widgets")
+                        .font(.system(size: 24, weight: .semibold))
                     Spacer()
-                    SmallShpaeIcons
+                    Button {
+                        showsHelp = true
+                    } label: {
+                        Image(systemName: "info.circle.fill")
+                            .font(.system(size: 30))
+                            .foregroundColor(.gray)
+                    }
+                }.padding(.horizontal)
+                
+                //Clock
+                ZStack {
+                    UClockView(
+                        dateFormat: "EE dd",
+                        date: Date(),
+                        firstColor: colorScheme == .light ? firstColorLight : firstColorDark,
+                        secondColor: colorScheme == .light ? secondColorLight : secondColorDark,
+                        showSeconds: false,
+                        showNumbers: true,
+                        shape: .scallop, bordered: false,
+                        hor: 10, mnt: 8, sec: 30
+                    )//.frame(width: 300, height: 200)
+                    .padding()
+                    
+                    VStack {
+                        Spacer()
+                        SmallShpaeIcons
+                    }
                 }
+                .background(Color(UIColor.systemGray6))
+                .frame(height: 250).cornerRadius(20)
+                .padding([.bottom, .horizontal])
+                .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 4, y: 3)
+                
+                //Previews
+                ColorPreviews.frame(height: 30)
+                
+                //Wallpapers
+                HStack {
+                    LightModeWallpaper
+                        .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
+                    DarkModeWallpaper
+                        .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
+                }.padding([.bottom, .horizontal])
+                
             }
-            .background(Color(UIColor.systemGray6))
-            .frame(height: 250).cornerRadius(20)
-            .padding([.bottom, .horizontal])
-            .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 4, y: 3)
-            
-            //Previews
-            ColorPreviews.frame(height: 30)
-            
-            //Wallpapers
-            HStack {
-                LightModeWallpaper
-                    .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
-                DarkModeWallpaper
-                    .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
-            }.padding([.bottom, .horizontal])
-            
+            if isiPad {
+                Color(UIColor.systemBackground).opacity(0.8)
+                Text("ipad_err")
+                    .frame(width: 200)
+                    .padding(30)
+                    .background(
+                        Color(UIColor.systemBackground)
+                            .cornerRadius(20)
+                            .shadow(radius: 10)
+                    )
+            }
         }
         .padding(10)
         //Navigation
+        .onAppear {
+            if !launchedBefore {
+                UserDefaults.standard.set(true, forKey: "_LAUNCHED")
+                if !isiPad {
+                    showsHelp = true
+                }
+            }
+        }
         .sheet(isPresented: $showsPicker, onDismiss: updateWallpaperSave) {
             ImagePicker(img: isPickingLight ? $bgBright : $bgDark)
         }

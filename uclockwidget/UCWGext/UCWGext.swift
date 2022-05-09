@@ -26,13 +26,13 @@ struct Provider: IntentTimelineProvider {
         let currentDate = Date()
         
         if configuration.showsSec == 1 {
-            for secOffset in 0 ..< 30 {
+            for secOffset in 0 ..< 40 {
                 let entryDate = Calendar.current.date(byAdding: .second, value: secOffset, to: currentDate)!
                 let entry = SimpleEntry(date: entryDate, configuration: configuration)
                 entries.append(entry)
             }
         } else { // every minute
-            for minuteOffset in 0 ..< 30 {
+            for minuteOffset in 0 ..< 40 {
                 let startOfMinute: Date = Calendar.current.date(bySetting: .second, value: 0, of: Date())!
                 let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: startOfMinute)!
                 let entry = SimpleEntry(date: entryDate, configuration: configuration)
@@ -40,7 +40,8 @@ struct Provider: IntentTimelineProvider {
             }
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)//.after(Calendar.current.date(byAdding: .second, value: 30, to: currentDate)!))
+//        let timeline = Timeline(entries: entries, policy: .atEnd)//.after(Calendar.current.date(byAdding: .second, value: 30, to: currentDate)!))
+        let timeline = Timeline(entries: entries, policy: .after(Calendar.current.date(byAdding: configuration.showsSec == 1 ? .second : .minute, value: 30, to: currentDate)!))
         completion(timeline)
     }
 }

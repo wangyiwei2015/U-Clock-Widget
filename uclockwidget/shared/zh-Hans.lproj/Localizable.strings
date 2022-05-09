@@ -8,6 +8,7 @@
 
 // ContentView
 "UClock Widgets" = "UClock 小组件";
+"ipad_err" = "iPad 不支持透明背景功能；请直接在主屏幕添加小组件。";
 
 // InfoView
 "info_title" = "帮助/关于";

@@ -8,6 +8,7 @@
 
 // ContentView
 "UClock Widgets" = "UClock 小组件";
+"ipad_err" = "The background feature does not support iPad. You can add widgets on the home screen.";
 
 // InfoView
 "info_title" = "Info & Help";

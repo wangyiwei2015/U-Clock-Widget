@@ -24,6 +24,8 @@ struct UClockView: View {
     var mnt: Double
     var sec: Double
     
+    @Environment(\.colorScheme) var colorScheme
+    
     enum ClockShape: Int {
         case circle, scallop, clover
     }
@@ -40,12 +42,13 @@ struct UClockView: View {
     var bgColor: Color {
         let mainOpacity: CGFloat = 0.1
         let mainComp = firstColor.cgColor!.components! * mainOpacity
-        let bgComp = [CGFloat]([1,1,1]) * (1 - mainOpacity)
+        let bgComp = [CGFloat](
+            colorScheme == .light ? [1,1,1] : [0,0,0]
+        ) * (1 - mainOpacity)
         return Color(red: (mainComp[0] + bgComp[0]),
               green: (mainComp[1] + bgComp[1]),
               blue: (mainComp[2] + bgComp[2])
         )
-        return Color(UIColor.systemBackground)
     }
     
     var body: some View {

@@ -40,15 +40,19 @@ struct UClockView: View {
     let shadowColor = Color(UIColor(white: 0, alpha: 0.4))
     
     var bgColor: Color {
-        let mainOpacity: CGFloat = 0.1
-        let mainComp = firstColor.cgColor!.components! * mainOpacity
-        let bgComp = [CGFloat](
-            colorScheme == .light ? [1,1,1] : [0,0,0]
-        ) * (1 - mainOpacity)
-        return Color(red: (mainComp[0] + bgComp[0]),
-              green: (mainComp[1] + bgComp[1]),
-              blue: (mainComp[2] + bgComp[2])
-        )
+        if let mainCGColor = firstColor.cgColor?.components {
+            let mainOpacity: CGFloat = 0.1
+            let mainComp = mainCGColor * mainOpacity
+            let bgComp = [CGFloat](
+                colorScheme == .light ? [1,1,1] : [0,0,0]
+            ) * (1 - mainOpacity)
+            return Color(red: (mainComp[0] + bgComp[0]),
+                  green: (mainComp[1] + bgComp[1]),
+                  blue: (mainComp[2] + bgComp[2])
+            )
+        } else {
+            return Color(UIColor.systemBackground)
+        }
     }
     
     var body: some View {
@@ -156,14 +160,14 @@ struct UClockView: View {
                                     DateText(r)
                                     Spacer()
                                     Circle().fill()
-                                        .foregroundColor(.pink)//Color(UIColor.systemGray5))
+                                        .foregroundColor(firstColor)//.pink)
                                         .opacity(0.7)
                                         .frame(width: r * 0.16, height: r * 0.16)
                                         .padding(r * 0.22)
                                 }.rotationEffect(Angle(degrees: sec * 6 + 180))
                             } else {
                                 Capsule().fill()
-                                    .foregroundColor(.pink)//Color(UIColor.systemGray5))
+                                    .foregroundColor(firstColor)//.pink)
                                     .frame(width: r * 0.04, height: r * 0.88)
                                     .offset(y: r * 0.44 - r * 0.02)
                                     .rotationEffect(Angle(degrees: sec * 6 + 180))

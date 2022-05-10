@@ -36,6 +36,8 @@ extension ContentView {
                         //error and cleanup
                         try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
                         bgBright = nil
+                        firstColorLight = .gray
+                        secondColorLight = .gray
                         errAlert = true
                         break
                     }
@@ -68,6 +70,8 @@ extension ContentView {
                         //error and cleanup
                         try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")
                         bgDark = nil
+                        firstColorDark = .gray
+                        secondColorDark = .gray
                         errAlert = true
                         break
                     }

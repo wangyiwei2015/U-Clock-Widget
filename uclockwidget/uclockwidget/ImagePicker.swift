@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var img: UIImage?
+    @Binding var isLightImg: Bool
+    @Binding var imgL: UIImage?
+    @Binding var imgD: UIImage?
     
     let picker = UIImagePickerController()
     
@@ -19,21 +21,34 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     func makeCoordinator() -> ImagePickerCoordinator {
-        ImagePickerCoordinator(selectedImage: $img)
+        ImagePickerCoordinator(
+            $isLightImg,
+            selectedImageL: $imgL,
+            selectedImageD: $imgD
+        )
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
 }
 
 class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    @Binding private var selectedImage: UIImage?
+    @Binding var isLightImg: Bool
+    @Binding var imgL: UIImage?
+    @Binding var imgD: UIImage?
 
-    init(selectedImage: Binding<UIImage?>) {
-        _selectedImage = selectedImage
+    init(_ isLight: Binding<Bool>, selectedImageL: Binding<UIImage?>, selectedImageD: Binding<UIImage?>) {
+        _imgL = selectedImageL
+        _imgD = selectedImageD
+        _isLightImg = isLight
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        selectedImage = (info[.originalImage] as! UIImage)
+        let chosenImg = (info[.originalImage] as! UIImage)
+        if isLightImg {
+            imgL = chosenImg
+        } else {
+            imgD = chosenImg
+        }
         picker.dismiss(animated: true)
     }
 

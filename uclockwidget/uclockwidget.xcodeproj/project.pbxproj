@@ -151,9 +151,9 @@
 				4D8FB9282826D35E0072D4C0 /* ContentView+Crop.swift */,
 				4D8FB92A2827A2A60072D4C0 /* ContentView+ColorPreview.swift */,
 				4D8FB92028269AA70072D4C0 /* ContentViewComponents.swift */,
+				4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */,
 				4DA546EC27F45E7A00CD04EF /* Assets.xcassets */,
 				4DA546EE27F45E7A00CD04EF /* Preview Content */,
-				4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */,
 				4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */,
 				4DC9D1312822160500B614E6 /* InfoView.swift */,
 			);

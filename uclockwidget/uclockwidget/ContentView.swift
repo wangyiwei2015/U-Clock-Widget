@@ -122,7 +122,9 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showsPicker, onDismiss: updateWallpaperSave) {
-            ImagePicker(img: isPickingLight ? $bgBright : $bgDark)
+            ImagePicker(
+                isLightImg: $isPickingLight, imgL: $bgBright, imgD: $bgDark
+            )
         }
         .sheet(isPresented: $showsHelp) {
             InfoView(

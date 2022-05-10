@@ -30,8 +30,15 @@ extension ContentView {
                 secondColorLight = Color(secondColor)
                 //cropped wallpaper
                 for pos in 1...9 {
-                    let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
-                    try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
+                    if let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
+                        try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
+                    } else {
+                        //error and cleanup
+                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
+                        bgBright = nil
+                        errAlert = true
+                        break
+                    }
                 }
             }
             
@@ -55,8 +62,15 @@ extension ContentView {
                 secondColorDark = Color(secondColor)
                 //cropped wallpaper
                 for pos in 1...9 {
-                    let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect())!
-                    try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
+                    if let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
+                        try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
+                    } else {
+                        //error and cleanup
+                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")
+                        bgDark = nil
+                        errAlert = true
+                        break
+                    }
                 }
             }
             

@@ -7,8 +7,9 @@
 */
 
 // ContentView
-"UClock Widgets" = "UClock 小组件";
+"UClock Widgets" = "UClock Widgets";
 "ipad_err" = "The background feature does not support iPad. You can add widgets on the home screen.";
+"_invalid_wall" = "⚠️ The wallpaper has invlid sizes.";
 
 // InfoView
 "info_title" = "Info & Help";

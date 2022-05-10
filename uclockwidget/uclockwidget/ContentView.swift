@@ -16,6 +16,7 @@ struct ContentView: View {
     @State var isPickingLight = true
     @State var showsPicker = false
     @State var showsHelp = false
+    @State var errAlert = false
     @State var launchedBefore = UserDefaults.standard.bool(forKey: "_LAUNCHED")
     @State var isiPad: Bool = UIDevice.current.userInterfaceIdiom != .phone
     
@@ -82,7 +83,7 @@ struct ContentView: View {
                         SmallShpaeIcons
                     }
                 }
-                .background(Color(UIColor.systemBackground))//systemGray6))
+                .background(Color(UIColor.systemGray6))
                 .frame(height: 250).cornerRadius(20)
                 .padding([.bottom, .horizontal])
                 .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 4, y: 3)
@@ -132,6 +133,7 @@ struct ContentView: View {
                 secondColor: colorScheme == .light ? $secondColorLight : $secondColorDark
             )
         }
+        .alert("_invalid_wall", isPresented: $errAlert, actions: {Button("Dismiss"){}})
     }
     
     func setWallpaper() {showsPicker = true}

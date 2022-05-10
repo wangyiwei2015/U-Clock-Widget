@@ -107,11 +107,11 @@ struct UClockView: View {
                         //数字
                         if showNumbers {
                             ZStack {
-                                Text("12").offset(y: -r * 0.5)
-                                Text("3").offset(x: r * 0.5)
-                                Text("6").offset(y: r * 0.5)
-                                Text("9").offset(x: -r * 0.5)
-                            }.font(.system(size: r * 0.57, weight: .black, design: .rounded))
+                                Text("12").offset(y: -r * 0.56)
+                                Text("3").offset(x: r * 0.56)
+                                Text("6").offset(y: r * 0.56)
+                                Text("9").offset(x: -r * 0.56)
+                            }.font(.system(size: r * 0.59, weight: .black))//, design: .rounded))
                                 .foregroundColor(firstColor)
                                 .opacity(0.3)
                         }
@@ -125,8 +125,8 @@ struct UClockView: View {
                             ).mask(
                                 Capsule().fill()
                                     .foregroundColor(.black)
-                                    .frame(width: r * 0.14, height: r * 0.48)
-                                    .offset(y: -r * 0.24 + r * 0.07)
+                                    .frame(width: r * 0.14, height: r * 0.52)
+                                    .offset(y: -r * 0.26 + r * 0.07)
                                     .rotationEffect(Angle(degrees: hor * 30 + mnt / 2))
                         )
                     }.shadow(color: shadowColor, radius: 1, y: 1)
@@ -139,8 +139,8 @@ struct UClockView: View {
                                     secondColor.opacity(0.8)
                                 ).mask(
                                     Capsule().fill()
-                                        .frame(width: r * 0.14, height: r * 0.64)
-                                        .offset(y: -r * 0.32 + r * 0.07)
+                                        .frame(width: r * 0.14, height: r * 0.70)
+                                        .offset(y: -r * 0.35 + r * 0.07)
                                         .rotationEffect(Angle(degrees: mnt * 6))
                             )
                         } else {
@@ -163,7 +163,7 @@ struct UClockView: View {
                                         .foregroundColor(firstColor)//.pink)
                                         .opacity(0.7)
                                         .frame(width: r * 0.16, height: r * 0.16)
-                                        .padding(r * 0.22)
+                                        .padding(r * 0.12)
                                 }.rotationEffect(Angle(degrees: sec * 6 + 180))
                             } else {
                                 Capsule().fill()
@@ -209,7 +209,7 @@ struct FlowerClockView_Previews: PreviewProvider {
             secondColor: Color.blue,
             showSeconds: true,
             showNumbers: true,
-            shape: .scallop,
+            shape: .circle,
             bordered: false,
             hor: 10, mnt: 35, sec: 35
         )

@@ -11,9 +11,9 @@ struct ScallopShape: Shape {
     func path(in rect: CGRect) -> Path {
         let squareWidth = min(rect.width, rect.height)
         let centerOffset = rect.size / 2
-        let rInner = squareWidth * 0.41 //0.43
-        let rOuter = squareWidth * 0.49 //0.47
-        let rCtrl = squareWidth * 0.45
+        let rInner = squareWidth * 0.46 //0.43
+        let rOuter = squareWidth * 0.53 //0.47
+        let rCtrl = squareWidth * 0.49
         let twoPi = CGFloat.pi * 2
         return Path {path in
             path.move(to: CGPoint(angleRad: twoPi / 48, r: rCtrl) + centerOffset)
@@ -32,5 +32,13 @@ struct ScallopShape: Shape {
                 )
             }
         }
+    }
+}
+
+struct ScallopShapePreview: PreviewProvider {
+    static var previews: some View {
+        ScallopShape().fill()
+            .frame(width: 300, height: 300)
+            .border(Color.green, width: 2)
     }
 }

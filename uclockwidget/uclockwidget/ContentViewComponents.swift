@@ -50,12 +50,17 @@ extension ContentView {
     @ViewBuilder var SmallShpaeIcons: some View {
         HStack(spacing: 5) {
             Image(systemName: "seal")
+                .foregroundColor(previewShape == .scallop ? Color(UIColor.systemGray2) : Color(UIColor.systemGray4))
+                .onTapGesture {previewShape = .scallop}
             Image(systemName: "circle")
+                .foregroundColor(previewShape == .circle ? Color(UIColor.systemGray2) : Color(UIColor.systemGray4))
+                .onTapGesture {previewShape = .circle}
             Image(systemName: "fanblades")
+                .foregroundColor(previewShape == .clover ? Color(UIColor.systemGray2) : Color(UIColor.systemGray4))
+                .onTapGesture {previewShape = .clover}
             Spacer()
         }
         .font(.system(size: 16, weight: .black))
-        .foregroundColor(Color(UIColor.systemGray4))
         .padding(10)
     }
 }

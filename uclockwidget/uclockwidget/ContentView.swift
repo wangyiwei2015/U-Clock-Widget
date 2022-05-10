@@ -20,6 +20,8 @@ struct ContentView: View {
     @State var launchedBefore = UserDefaults.standard.bool(forKey: "_LAUNCHED")
     @State var isiPad: Bool = UIDevice.current.userInterfaceIdiom != .phone
     
+    @State var previewShape: UClockView.ClockShape = .scallop
+    
     @Environment(\.colorScheme) var colorScheme
     
     @State var firstColorLight: Color = {
@@ -71,10 +73,10 @@ struct ContentView: View {
                         date: Date(),
                         firstColor: colorScheme == .light ? firstColorLight : firstColorDark,
                         secondColor: colorScheme == .light ? secondColorLight : secondColorDark,
-                        showSeconds: false,
+                        showSeconds: true,
                         showNumbers: true,
-                        shape: .scallop, bordered: false,
-                        hor: 10, mnt: 8, sec: 30
+                        shape: previewShape, bordered: false,
+                        hor: 10, mnt: 8, sec: 22
                     )//.frame(width: 300, height: 200)
                     .padding()
                     

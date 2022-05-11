@@ -209,7 +209,7 @@ struct FlowerClockView_Previews: PreviewProvider {
             secondColor: Color.blue,
             showSeconds: true,
             showNumbers: true,
-            shape: .circle,
+            shape: .scallop,
             bordered: false,
             hor: 10, mnt: 35, sec: 35
         )

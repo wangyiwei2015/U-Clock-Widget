@@ -75,7 +75,7 @@ struct UCWGextEntryView : View {
                 ?? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathD)))
             : try? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathD)))
                 ?? UIImage(data: Data(contentsOf: URL(fileURLWithPath: pathB)))
-        return savedImg ?? nil
+        return savedImg
     }
     
     func tunnedColor(for userColorTheme: ColorTheme, isFirstColor: Bool = true) -> Color {

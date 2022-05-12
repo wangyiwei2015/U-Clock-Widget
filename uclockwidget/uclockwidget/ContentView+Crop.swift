@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ColorThiefSwift
+import WidgetKit
 
 extension ContentView {
     func updateWallpaperSave() {
@@ -39,7 +40,7 @@ extension ContentView {
                         firstColorLight = .gray
                         secondColorLight = .gray
                         errAlert = true
-                        break
+                        return
                     }
                 }
             }
@@ -73,12 +74,17 @@ extension ContentView {
                         firstColorDark = .gray
                         secondColorDark = .gray
                         errAlert = true
-                        break
+                        return
                     }
                 }
             }
             
         }
         //print(imgPath)
+        postSaveWall()
+    }
+    
+    func postSaveWall() {
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }

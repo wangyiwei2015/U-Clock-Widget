@@ -7,46 +7,6 @@
 
 import SwiftUI
 
-struct SpringboardGeometry {
-    let name: String
-    let size: CGSize
-    let inset: EdgeInsets
-    let verticalSpacing: CGFloat
-    let widgetHeight: CGFloat
-}
-
-let screenProperties: [SpringboardGeometry] = [
-    .init(
-        name: "iPhone Pro Max",
-        size: CGSize(width: 1284, height: 2778),
-        inset: EdgeInsets(top: 246, leading: 105, bottom: 708, trailing: 105),
-        verticalSpacing: 126,
-        widgetHeight: 510
-    ),
-    .init(
-        name: "iPhone & Pro",
-        size: CGSize(width: 1170, height: 2532),
-        inset: EdgeInsets(top: 231, leading: 78, bottom: -1, trailing: 78),
-        verticalSpacing: 114,
-        widgetHeight: 474
-    ),
-    .init(
-        name: "iPhone mini",
-        size: CGSize(width: 1080, height: 2340),
-        inset: EdgeInsets(top: 222, leading: 66, bottom: -1, trailing: 66),
-        verticalSpacing: 101,
-        widgetHeight: 446.5
-    ),
-    //iPhone X and X max ?
-    .init(
-        name: "iPhone 4.7",
-        size: CGSize(width: 750, height: 1334),
-        inset: EdgeInsets(top: 60, leading: 54, bottom: -1, trailing: 54),
-        verticalSpacing: 56,
-        widgetHeight: 296
-    ),
-]
-
 //cropImage(lightUIImage!, toRect: postion.getRect())
 
 func cropImage(
@@ -116,9 +76,11 @@ struct DeviceWidgetPosition {
     // 小组件 左上
     static var smallTopLeft: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 74)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 82)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 77)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 77)
@@ -140,9 +102,11 @@ struct DeviceWidgetPosition {
     // 小组件 右上
     static var smallTopRight: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 189, y: 74)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 226, y: 82)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 206, y: 77)
         case .iPhone12Mini:
             return CGPoint(x: 197, y: 77)
@@ -164,9 +128,11 @@ struct DeviceWidgetPosition {
     // 小组件 中左
     static var smallCenterLeft: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 256.3333)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 294)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 273)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 267)
@@ -188,9 +154,11 @@ struct DeviceWidgetPosition {
     // 小组件 中右
     static var smallCenterRight: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 189, y: 256.3333)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 226, y: 294)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 206, y: 273)
         case .iPhone12Mini:
             return CGPoint(x: 197, y: 267)
@@ -212,9 +180,11 @@ struct DeviceWidgetPosition {
     // 小组件 下左
     static var smallBottomLeft: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 439)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 506)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 469)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 457)
@@ -236,9 +206,11 @@ struct DeviceWidgetPosition {
     // 小组件 下右
     static var smallBottomRight: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 189, y: 439)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 226, y: 506)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 206, y: 469)
         case .iPhone12Mini:
             return CGPoint(x: 197, y: 457)
@@ -260,9 +232,11 @@ struct DeviceWidgetPosition {
     // 中组件 上方
     static var mediumTop: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 74)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 82)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 77)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 77)
@@ -284,9 +258,11 @@ struct DeviceWidgetPosition {
     // 中组件 中间
     static var mediumCenter: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 256.3333)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 294)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 273)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 267)
@@ -308,9 +284,11 @@ struct DeviceWidgetPosition {
     // 中组件 下方
     static var mediumBottom: CGPoint {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGPoint(x: 22, y: 439)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGPoint(x: 32, y: 506)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGPoint(x: 26, y: 469)
         case .iPhone12Mini:
             return CGPoint(x: 23, y: 457)
@@ -334,9 +312,11 @@ struct DeviceWidgetPosition {
 enum DeviceWidgetSize {
     static var small: CGSize {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGSize(width: 149, height: 149)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGSize(width: 170, height: 170)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13, .iPhone13Pro:
             return CGSize(width: 158, height: 158)
         case .iPhone11ProMax, .iPhone11, .iPhoneXSMax, .iPhoneXR:
             return CGSize(width: 169, height: 169)
@@ -355,9 +335,11 @@ enum DeviceWidgetSize {
 
     static var meduim: CGSize {
         switch UIDevice().type {
-        case .iPhone12ProMax:
+        case .iPhone13Mini:
+            return CGSize(width: 316, height: 149)
+        case .iPhone12ProMax, .iPhone13ProMax:
             return CGSize(width: 364, height: 170)
-        case .iPhone12Pro, .iPhone12:
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
             return CGSize(width: 338, height: 158)
         case .iPhone11ProMax, .iPhone11, .iPhoneXSMax, .iPhoneXR:
             return CGSize(width: 360, height: 169)
@@ -403,6 +385,10 @@ extension UIDevice {
              iPhone12 = "iPhone 12",
              iPhone12Pro = "iPhone 12 Pro",
              iPhone12ProMax = "iPhone 12 Pro Max",
+             iPhone13Mini = "iPhone 13 Mini",
+             iPhone13 = "iPhone 13",
+             iPhone13Pro = "iPhone 13 Pro",
+             iPhone13ProMax = "iPhone 13 Pro Max",
 
              unrecognized = "?unrecognized?"
     }
@@ -450,6 +436,10 @@ extension UIDevice {
             "iPhone13,2": .iPhone12,
             "iPhone13,3": .iPhone12Pro,
             "iPhone13,4": .iPhone12ProMax,
+            "iPhoen14,4": .iPhone13Mini,
+            "iPhoen14,5": .iPhone13,
+            "iPhoen14,2": .iPhone13Pro,
+            "iPhoen14,3": .iPhone13ProMax,
         ]
 
         if let model = modelMap[String(validatingUTF8: modelCode!)!] {

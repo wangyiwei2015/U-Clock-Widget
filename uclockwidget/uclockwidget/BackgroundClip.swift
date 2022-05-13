@@ -43,6 +43,9 @@ enum WidgetCropPostion: Int {
     case mediumTop
     case mediumCenter
     case mediumBottom
+    
+    case largeTop
+    case largeBottom
 
     func getRect() -> CGRect {
         switch self {
@@ -64,6 +67,10 @@ enum WidgetCropPostion: Int {
             return CGRect(origin: DeviceWidgetPosition.mediumCenter, size: DeviceWidgetSize.meduim)
         case .mediumBottom:
             return CGRect(origin: DeviceWidgetPosition.mediumBottom, size: DeviceWidgetSize.meduim)
+        case .largeTop:
+            return CGRect(origin: DeviceWidgetPosition.smallTopLeft, size: DeviceWidgetSize.large)
+        case .largeBottom:
+            return CGRect(origin: DeviceWidgetPosition.smallCenterLeft, size: DeviceWidgetSize.large)
         }
     }
 }
@@ -502,6 +509,42 @@ enum DeviceWidgetSize {
             return CGSize(width: 291, height: 144)
         default:
             return CGSize(width: 360, height: 169)
+        }
+    }
+    
+    static var large: CGSize {
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGSize(width: 338, height: 338)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGSize(width: 364, height: 364)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGSize(width: 316, height: 316)
+        }
+        
+        switch UIDevice().type {
+        case .iPhone13Mini:
+            return CGSize(width: 316, height: 316)
+        case .iPhone12ProMax, .iPhone13ProMax:
+            return CGSize(width: 364, height: 364)
+        case .iPhone12Pro, .iPhone12, .iPhone13Pro, .iPhone13:
+            return CGSize(width: 338, height: 338)
+        case .iPhone11ProMax, .iPhone11, .iPhoneXSMax, .iPhoneXR:
+            return CGSize(width: 360, height: 360)
+        case .iPhone12Mini, .iPhone11Pro, .iPhoneXS, .iPhoneX:
+            return CGSize(width: 329, height: 329)
+        case .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus:
+            return CGSize(width: 348, height: 348)
+        case .iPhone6S, .iPhone7, .iPhone8, .iPhoneSE2:
+            return CGSize(width: 322, height: 322)
+        case .iPhoneSE, .iPod7:
+            return CGSize(width: 291, height: 291)
+        default:
+            return CGSize(width: 360, height: 360)
         }
     }
 }

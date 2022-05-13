@@ -122,6 +122,7 @@ struct ContentView: View {
                 if !isiPad {
                     showsHelp = true
                 }
+                //print(UIDevice.current.type.rawValue)
             }
         }
         .sheet(isPresented: $showsPicker, onDismiss: updateWallpaperSave) {
@@ -136,6 +137,9 @@ struct ContentView: View {
             )
         }
         .alert("_invalid_wall", isPresented: $errAlert, actions: {Button("Dismiss"){}})
+        #if(DEBUG)
+        .fullScreenCover(isPresented: .constant(false)) {DebugView(wall: $bgBright)}
+        #endif
     }
     
     func setWallpaper() {showsPicker = true}

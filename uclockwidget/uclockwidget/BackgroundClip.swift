@@ -17,7 +17,6 @@ func cropImage(
 ) -> UIImage? {
     let imageViewScale = max(inputImage.size.width / viewWidth,
                              inputImage.size.height / viewHeight)
-
     // Scale cropRect to handle images larger than shown-on-screen size
     let cropZone = CGRect(x: cropRect.origin.x * imageViewScale,
                           y: cropRect.origin.y * imageViewScale,
@@ -26,9 +25,7 @@ func cropImage(
 
     // Perform cropping in Core Graphics
     guard let cutImageRef: CGImage = inputImage.cgImage?.cropping(to: cropZone)
-    else {
-        return nil
-    }
+    else {return nil}
 
     // Return image to UIImage
     let croppedImage = UIImage(cgImage: cutImageRef)
@@ -75,6 +72,20 @@ enum WidgetCropPostion: Int {
 struct DeviceWidgetPosition {
     // 小组件 左上
     static var smallTopLeft: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 77)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 82)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 74)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 74)
@@ -101,6 +112,20 @@ struct DeviceWidgetPosition {
 
     // 小组件 右上
     static var smallTopRight: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 206, y: 77)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 226, y: 82)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 189, y: 74)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 189, y: 74)
@@ -127,6 +152,20 @@ struct DeviceWidgetPosition {
 
     // 小组件 中左
     static var smallCenterLeft: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 273)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 294)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 256.3333)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 256.3333)
@@ -153,6 +192,20 @@ struct DeviceWidgetPosition {
 
     // 小组件 中右
     static var smallCenterRight: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 206, y: 273)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 226, y: 294)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 189, y: 256.3333)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 189, y: 256.3333)
@@ -179,6 +232,20 @@ struct DeviceWidgetPosition {
 
     // 小组件 下左
     static var smallBottomLeft: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 469)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 506)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 439)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 439)
@@ -205,6 +272,20 @@ struct DeviceWidgetPosition {
 
     // 小组件 下右
     static var smallBottomRight: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 206, y: 469)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 226, y: 506)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 189, y: 439)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 189, y: 439)
@@ -231,6 +312,20 @@ struct DeviceWidgetPosition {
 
     // 中组件 上方
     static var mediumTop: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 77)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 82)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 74)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 74)
@@ -257,6 +352,20 @@ struct DeviceWidgetPosition {
 
     // 中组件 中间
     static var mediumCenter: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 273)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 294)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 256.3333)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 256.3333)
@@ -283,6 +392,20 @@ struct DeviceWidgetPosition {
 
     // 中组件 下方
     static var mediumBottom: CGPoint {
+        
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGPoint(x: 26, y: 469)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGPoint(x: 32, y: 506)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGPoint(x: 22, y: 439)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGPoint(x: 22, y: 439)
@@ -311,6 +434,19 @@ struct DeviceWidgetPosition {
 // 小组件的大小
 enum DeviceWidgetSize {
     static var small: CGSize {
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGSize(width: 158, height: 158)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGSize(width: 170, height: 170)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGSize(width: 149, height: 149)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGSize(width: 149, height: 149)
@@ -334,6 +470,19 @@ enum DeviceWidgetSize {
     }
 
     static var meduim: CGSize {
+        //iPhone 13
+        if UIScreen.main.bounds.size == CGSize(width: 390, height: 844) {
+            return CGSize(width: 338, height: 158)
+        }
+        //iPhone 13 Max
+        if UIScreen.main.bounds.size == CGSize(width: 428, height: 926) {
+            return CGSize(width: 364, height: 170)
+        }
+        //iPhone 13 Mini
+        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+            return CGSize(width: 316, height: 149)
+        }
+        
         switch UIDevice().type {
         case .iPhone13Mini:
             return CGSize(width: 316, height: 149)

@@ -15,3 +15,9 @@
 - [yamoridon/ColorThiefSwift](https://github.com/yamoridon/ColorThiefSwift)：提取壁纸颜色，作为库引入项目
 
 - [zhangyu1818/clocks-widget](https://github.com/zhangyu1818/clocks-widget)：制作透明背景，嵌入了裁剪相关代码
+
+---
+
+！已知问题：
+
+BackgroudClip.swift - 获取 device type 对 iPhone 13 系列无效，原因未知；临时解决办法：通过 Screen size 判断设备。

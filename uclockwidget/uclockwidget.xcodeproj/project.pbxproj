@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3A9B5E282DFE6800F0483A /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A9B5D282DFE6800F0483A /* DebugView.swift */; };
 		4D8FB92128269AA70072D4C0 /* ContentViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB92028269AA70072D4C0 /* ContentViewComponents.swift */; };
 		4D8FB9232826AFD00072D4C0 /* CloverShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9222826AFD00072D4C0 /* CloverShape.swift */; };
 		4D8FB9242826AFD60072D4C0 /* CloverShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FB9222826AFD00072D4C0 /* CloverShape.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D3A9B5D282DFE6800F0483A /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		4D8FB92028269AA70072D4C0 /* ContentViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewComponents.swift; sourceTree = "<group>"; };
 		4D8FB9222826AFD00072D4C0 /* CloverShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverShape.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4D8FB9282826D35E0072D4C0 /* ContentView+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Crop.swift"; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		4DB16BD028200A4E00684B5F /* uclockwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = uclockwidget.entitlements; sourceTree = "<group>"; };
 		4DB16BD128200A7200684B5F /* UCWGextExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCWGextExtension.entitlements; sourceTree = "<group>"; };
 		4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; };
+		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				4DA546EE27F45E7A00CD04EF /* Preview Content */,
 				4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */,
 				4DC9D1312822160500B614E6 /* InfoView.swift */,
+				4D3A9B5D282DFE6800F0483A /* DebugView.swift */,
 			);
 			path = uclockwidget;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				4D8FB92B2827A2A60072D4C0 /* ContentView+ColorPreview.swift in Sources */,
 				4DA546EB27F45E7900CD04EF /* ContentView.swift in Sources */,
 				4D8FB92128269AA70072D4C0 /* ContentViewComponents.swift in Sources */,
+				4D3A9B5E282DFE6800F0483A /* DebugView.swift in Sources */,
 				4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */,
 				4DC9D1322822160500B614E6 /* InfoView.swift in Sources */,
 				4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */,
@@ -546,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -563,7 +567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.11;
+				MARKETING_VERSION = 1.2.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -581,7 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = uclockwidget/uclockwidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "\"uclockwidget/Preview Content\"";
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				ENABLE_PREVIEWS = YES;
@@ -598,7 +602,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.11;
+				MARKETING_VERSION = 1.2.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -614,7 +618,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -626,7 +630,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.11;
+				MARKETING_VERSION = 1.2.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -643,7 +647,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = UCWGextExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_TEAM = JS2ME2LTBF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UCWGext/Info.plist;
@@ -655,7 +659,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.11;
+				MARKETING_VERSION = 1.2.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

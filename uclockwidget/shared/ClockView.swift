@@ -73,7 +73,7 @@ struct UClockView: View {
                                 Circle().fill()
                                     .shadow(
                                         color: Color(UIColor(white: 0, alpha: 0.4)),
-                                        radius: 4, y: 2
+                                        radius: 2, y: 2
                                     )
                             } else {
                                 Circle().stroke(lineWidth: r * 0.1)
@@ -84,7 +84,7 @@ struct UClockView: View {
                                     .rotationEffect(Angle(degrees: 15))
                                     .shadow(
                                         color: Color(UIColor(white: 0, alpha: 0.4)),
-                                        radius: 4, y: 2
+                                        radius: 2, y: 2
                                     )
                             } else {
                                 ScallopShape().stroke(lineWidth: r * 0.1)
@@ -94,7 +94,7 @@ struct UClockView: View {
                                 CloverShape()
                                     .shadow(
                                         color: Color(UIColor(white: 0, alpha: 0.4)),
-                                        radius: 4, y: 2
+                                        radius: 2, y: 2
                                     )
                             } else {
                                 CloverShape().stroke(lineWidth: r * 0.1)

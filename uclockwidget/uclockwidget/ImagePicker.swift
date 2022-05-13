@@ -43,7 +43,8 @@ class ImagePickerCoordinator: NSObject, UINavigationControllerDelegate, UIImageP
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let chosenImg = (info[.originalImage] as! UIImage)
+        let chosenImg = info[.originalImage] as! UIImage
+        //print(chosenImg.size)
         if isLightImg {
             imgL = chosenImg
         } else {

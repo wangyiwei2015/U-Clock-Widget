@@ -99,8 +99,16 @@ struct ContentView: View {
                         .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
                     DarkModeWallpaper
                         .shadow(color: Color(UIColor(white: 0, alpha: 0.5)), radius: 2, y: 2)
-                }.padding([.bottom, .horizontal])
-                
+                }.padding(.horizontal).padding(.bottom, 8)
+                Button {
+                    postSaveWall()
+                    UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
+                } label: {
+                    Image(systemName: "house.fill")
+                        .font(.system(size: 30))
+                        .foregroundColor(.gray)
+                        .ignoresSafeArea()
+                }
             }
             if isiPad {
                 Color(UIColor.systemBackground).opacity(0.8)
@@ -147,6 +155,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(launchedBefore: true)
     }
 }

@@ -15,7 +15,7 @@ extension ContentView {
             // Save light wallpaper -----------------------------------------------------------
             if let brightImg = bgBright {
                 //full wallpaper
-                try! brightImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgB.jpg"), options: .atomic)
+                try! brightImg.jpegData(compressionQuality: 0.5)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgB.jpg"), options: .atomic)
                 //theme color
                 let theme = ColorThief.getPalette(from: brightImg, colorCount: 2)!
                 var hue: CGFloat = 0
@@ -32,7 +32,7 @@ extension ContentView {
                 //cropped wallpaper
                 for pos in 1...9 {
                     if let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
-                        try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
+                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
                     } else {
                         //error and cleanup
                         try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
@@ -49,7 +49,7 @@ extension ContentView {
             // Save dark wallpaper -----------------------------------------------------------
             if let darkImg = bgDark {
                 //full wallpaper
-                try! darkImg.jpegData(compressionQuality: 1.0)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgD.jpg"), options: .atomic)
+                try! darkImg.jpegData(compressionQuality: 0.5)?.write(to: URL(fileURLWithPath: "\(imgPath)/imgD.jpg"), options: .atomic)
                 //theme color
                 let theme = ColorThief.getPalette(from: darkImg, colorCount: 2)!
                 var hue: CGFloat = 0
@@ -66,7 +66,7 @@ extension ContentView {
                 //cropped wallpaper
                 for pos in 1...9 {
                     if let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
-                        try! img.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
+                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
                     } else {
                         //error and cleanup
                         try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")

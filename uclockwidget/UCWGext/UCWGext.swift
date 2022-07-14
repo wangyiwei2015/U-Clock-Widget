@@ -25,13 +25,13 @@ struct Provider: IntentTimelineProvider {
         let currentDate = Date()
         
         if configuration.showsSec == 1 {
-            for secOffset in 0 ..< 240 {
+            for secOffset in 0..<240 { //原本是40
                 let entryDate = Calendar.current.date(byAdding: .second, value: secOffset, to: currentDate)!
                 let entry = SimpleEntry(date: entryDate, configuration: configuration)
                 entries.append(entry)
             }
         } else { // every minute
-            for minuteOffset in 0 ..< 120 {
+            for minuteOffset in 0..<120 { //原本是40
                 let startOfMinute: Date = Calendar.current.date(bySetting: .second, value: 0, of: Date())!
                 let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: startOfMinute)!
                 let entry = SimpleEntry(date: entryDate, configuration: configuration)

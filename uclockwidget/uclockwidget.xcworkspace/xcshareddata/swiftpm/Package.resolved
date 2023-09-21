@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "transparency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wangyiwei2015/Transparency",
+      "state" : {
+        "branch" : "dev",
+        "revision" : "cd6c4d3fa4b210b8cadb0be050b31003c0a49511"
+      }
+    }
+  ],
+  "version" : 2
+}

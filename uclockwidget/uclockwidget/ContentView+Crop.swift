@@ -30,19 +30,36 @@ extension ContentView {
                 ud.set([hue, sat, bri], forKey: "_IMG_COLOR_LIGHT_2")
                 secondColorLight = Color(secondColor)
                 //cropped wallpaper
-                for pos in 1...9 {
-                    if let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
-                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
-                    } else {
-                        //error and cleanup
-                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
-                        bgBright = nil
-                        firstColorLight = .gray
-                        secondColorLight = .gray
-                        errAlert = true
-                        return
+                if let cropped = bgGen.getImages(for: brightImg.cgImage!) {
+                    let imgs = cropped.flattened()
+                    for pos in 1...9 {
+                        let imgData = UIImage(cgImage: imgs[pos - 1])
+                            .jpegData(compressionQuality: 0.9)!
+                        try! imgData.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
                     }
+                } else {
+                    //error and cleanup
+                    try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
+                    bgBright = nil
+                    firstColorLight = .gray
+                    secondColorLight = .gray
+                    errAlert = true
+                    return
                 }
+
+//                for pos in 1...9 {
+//                    if let img = cropImage(brightImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
+//                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgB\(pos).jpg"), options: .atomic)
+//                    } else {
+//                        //error and cleanup
+//                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgB.jpg")
+//                        bgBright = nil
+//                        firstColorLight = .gray
+//                        secondColorLight = .gray
+//                        errAlert = true
+//                        return
+//                    }
+//                }
             }
             
         } else {
@@ -64,19 +81,35 @@ extension ContentView {
                 ud.set([hue, sat, bri], forKey: "_IMG_COLOR_DARK_2")
                 secondColorDark = Color(secondColor)
                 //cropped wallpaper
-                for pos in 1...9 {
-                    if let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
-                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
-                    } else {
-                        //error and cleanup
-                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")
-                        bgDark = nil
-                        firstColorDark = .gray
-                        secondColorDark = .gray
-                        errAlert = true
-                        return
+                if let cropped = bgGen.getImages(for: darkImg.cgImage!) {
+                    let imgs = cropped.flattened()
+                    for pos in 1...9 {
+                        let imgData = UIImage(cgImage: imgs[pos - 1])
+                            .jpegData(compressionQuality: 0.9)!
+                        try! imgData.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
                     }
+                } else {
+                    //error and cleanup
+                    try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")
+                    bgDark = nil
+                    firstColorDark = .gray
+                    secondColorDark = .gray
+                    errAlert = true
+                    return
                 }
+//                for pos in 1...9 {
+//                    if let img = cropImage(darkImg, toRect: WidgetCropPostion(rawValue: pos - 1)!.getRect()) {
+//                        try! img.jpegData(compressionQuality: 0.75)!.write(to: URL(fileURLWithPath: "\(imgPath)/imgD\(pos).jpg"), options: .atomic)
+//                    } else {
+//                        //error and cleanup
+//                        try? FileManager.default.removeItem(atPath: "\(imgPath)/imgD.jpg")
+//                        bgDark = nil
+//                        firstColorDark = .gray
+//                        secondColorDark = .gray
+//                        errAlert = true
+//                        return
+//                    }
+//                }
             }
             
         }

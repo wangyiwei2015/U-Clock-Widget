@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Transparency
 
 struct ContentView: View {
     @State var hor: Int = 0
@@ -48,6 +49,8 @@ struct ContentView: View {
             return Color(hue: savedColor[0], saturation: savedColor[1], brightness: savedColor[2])
         } else {return .gray}
     }()
+    
+    let bgGen = WidgetBackground()
     
     var body: some View {
         ZStack {

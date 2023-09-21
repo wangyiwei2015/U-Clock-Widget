@@ -32,7 +32,7 @@
 		1899C3DFEAE34F1C95BFCCD36547B2FE /* ColorThiefSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ColorThiefSwift-Info.plist"; sourceTree = "<group>"; };
 		236B4795A4C0D7CEF80FCCFD4A946864 /* ColorThiefSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ColorThiefSwift-dummy.m"; sourceTree = "<group>"; };
 		26FF7BCD81414555AD47D2380CEA1C64 /* Pods-uclockwidget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-uclockwidget.modulemap"; sourceTree = "<group>"; };
-		3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ColorThiefSwift; path = ColorThiefSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ColorThiefSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		417E0C7FEC2CD1D392F511009A916A2C /* ColorThiefSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorThiefSwift-prefix.pch"; sourceTree = "<group>"; };
 		6257EBE3837AF2C0CB436B3E221D9464 /* ColorThief.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorThief.swift; path = ColorThiefSwift/Classes/ColorThief.swift; sourceTree = "<group>"; };
 		67D074676F0C7E252CE20B2DF2B5B0D7 /* ColorThiefSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ColorThiefSwift.modulemap; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		864B586D7D98BABC121C6D98C44575A2 /* ColorThiefSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ColorThiefSwift-umbrella.h"; sourceTree = "<group>"; };
 		87832139CDCE16AD4084F56DC9C14BAC /* Pods-uclockwidget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-uclockwidget-umbrella.h"; sourceTree = "<group>"; };
 		9D207E0222E35F486DC244C57A2B63EA /* Pods-uclockwidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-uclockwidget.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E919C8CC41BB1FE8AFD3A17B936E907 /* MMCQ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MMCQ.swift; path = ColorThiefSwift/Classes/MMCQ.swift; sourceTree = "<group>"; };
 		A70288C54690240211F1277ADE94F92D /* ColorThiefSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorThiefSwift.debug.xcconfig; sourceTree = "<group>"; };
 		A727363DA0BA08ABC5F80E6400709F1A /* ColorThiefSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ColorThiefSwift.release.xcconfig; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		CDAB197D1284EA4FE3944215419E145E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift */,
+				3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift.framework */,
 				80E448C38CDB64D5E22D3CC4BEF2AEBA /* Pods-uclockwidget */,
 			);
 			name = Products;
@@ -152,7 +152,6 @@
 				9E919C8CC41BB1FE8AFD3A17B936E907 /* MMCQ.swift */,
 				FF8E357C389673960E8669807A7B8EE0 /* Support Files */,
 			);
-			name = ColorThiefSwift;
 			path = ColorThiefSwift;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 			);
 			name = ColorThiefSwift;
 			productName = ColorThiefSwift;
-			productReference = 3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift */;
+			productReference = 3686058C7B228377FDC0BF728D623CA2 /* ColorThiefSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1C669E49F40FF1855A3FD8C4B357385E /* Pods-uclockwidget */ = {
@@ -425,7 +424,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ColorThiefSwift/ColorThiefSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ColorThiefSwift/ColorThiefSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +558,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/ColorThiefSwift/ColorThiefSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/ColorThiefSwift/ColorThiefSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

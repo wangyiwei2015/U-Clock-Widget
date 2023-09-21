@@ -105,9 +105,9 @@ struct UCWGextEntryView : View {
         case .unknown: return Color.gray
         }
     }
-
+    
     @ViewBuilder
-    var body: some View {
+    var clockView: some View {
         UClockView(
             dateFormat: entry.configuration.dateFormat,
             date: entry.date,
@@ -121,7 +121,20 @@ struct UCWGextEntryView : View {
             hor: Double(Int(formatter.string(from: entry.date))! / 10000),
             mnt: Double((Int(formatter.string(from: entry.date))! % 10000) / 100),
             sec: Double(Int(formatter.string(from: entry.date))! % 100)
-        ).background(Color(UIColor.systemGray6))
+        )
+    }
+
+    @ViewBuilder
+    var body: some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            clockView
+            .containerBackground(for: .widget) {
+                Color(UIColor.systemGray6)
+            }
+        } else {
+            clockView
+            .background(Color(UIColor.systemGray6))
+        }
     }
 }
 
@@ -148,6 +161,7 @@ struct UCWG_Circle: Widget {
         .configurationDisplayName(localized("uclk_circle"))
         .description(localized("widget_desc"))
         .supportedFamilies([.systemSmall, .systemMedium])
+        .contentMarginsDisabled()
     }
 }
 
@@ -164,6 +178,7 @@ struct UCWG_Scallop: Widget {
         .configurationDisplayName(localized("uclk_scallop"))
         .description(localized("widget_desc"))
         .supportedFamilies([.systemSmall, .systemMedium])
+        .contentMarginsDisabled()
     }
 }
 
@@ -180,6 +195,7 @@ struct UCWG_Clover: Widget {
         .configurationDisplayName(localized("uclk_clover"))
         .description(localized("widget_desc"))
         .supportedFamilies([.systemSmall, .systemMedium])
+        .contentMarginsDisabled()
     }
 }
 

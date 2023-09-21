@@ -130,6 +130,7 @@ struct UClockView: View {
                                     .rotationEffect(Angle(degrees: hor * 30 + mnt / 2))
                         )
                     }.shadow(color: shadowColor, radius: 1, y: 1)
+                        .animation(.none)
                     
                     Group {
                         //分针
@@ -151,6 +152,7 @@ struct UClockView: View {
                                 .rotationEffect(Angle(degrees: mnt * 6))
                         }
                     }.shadow(color: shadowColor, radius: 1, y: 1)
+                        .animation(.none)
                     
                     Group {
                         //秒针
@@ -180,6 +182,7 @@ struct UClockView: View {
     //                            }
                         }
                     }.shadow(color: shadowColor, radius: 1, y: 1)
+                        .animation(.none)
                     
                 }.frame(width: r * 2, height: r * 2, alignment: .center)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

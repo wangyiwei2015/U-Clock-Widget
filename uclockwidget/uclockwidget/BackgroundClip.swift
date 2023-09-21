@@ -5,6 +5,9 @@
 //  Created by wyw on 2022/3/31.
 //
 
+
+/*
+
 import SwiftUI
 
 //cropImage(lightUIImage!, toRect: postion.getRect())
@@ -647,3 +650,8 @@ extension UIDevice {
         return Model.unrecognized
     }
 }
+
+
+
+
+*/

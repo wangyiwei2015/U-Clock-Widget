@@ -46,7 +46,7 @@ struct InfoView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             LeftLabel("chevron.left.forwardslash.chevron.right", localized("open_source"))
                             Text("transparent").padding(.leading)
-                            Link("zhangyu1818 / clocks-widget ↗", destination: URL(string: "https://github.com/zhangyu1818/clocks-widget")!)
+                            Link("wangyiwei2015 / Transparency ↗", destination: URL(string: "https://github.com/wangyiwei2015/Transparency")!)
                                 .tint(secondColor).padding(.leading).shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 1, x: 0, y: 01)
                             Text("colorext").padding(.leading)
                             Link("yamoridon / ColorThiefSwift ↗", destination: URL(string: "https://github.com/yamoridon/ColorThiefSwift")!)
@@ -92,10 +92,10 @@ struct InfoView: View {
         .foregroundColor(firstColor)
         .shadow(color: Color(UIColor(white: 0, alpha: 0.3)), radius: 2, x: 0, y: 2)
     }
+    
+    let ver = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String? ?? "0"
+    let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String? ?? "0"
 }
-
-let ver = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String? ?? "0"
-let build = Bundle.main.infoDictionary!["CFBundleVersion"] as! String? ?? "0"
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {

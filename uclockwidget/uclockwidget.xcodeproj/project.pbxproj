@@ -32,9 +32,7 @@
 		4DA5471727F4A2D900CD04EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471527F4A2D900CD04EF /* Utils.swift */; };
 		4DA5471927F4A36C00CD04EF /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* ClockView.swift */; };
 		4DA5471A27F4A36C00CD04EF /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA5471827F4A36C00CD04EF /* ClockView.swift */; };
-		4DB16BCF282001B700684B5F /* BackgroundClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */; };
 		4DC8B62D27F59E7D00B7A927 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */; };
-		4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */; };
 		4DC9D1322822160500B614E6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9D1312822160500B614E6 /* InfoView.swift */; };
 		773217DB9A28531A556D9A3B /* Pods_uclockwidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */; };
 		B3B87A5B2ABC2C3A00681803 /* Transparency in Frameworks */ = {isa = PBXBuildFile; productRef = B3B87A5A2ABC2C3A00681803 /* Transparency */; };
@@ -93,7 +91,6 @@
 		4DB16BD028200A4E00684B5F /* uclockwidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = uclockwidget.entitlements; sourceTree = "<group>"; };
 		4DB16BD128200A7200684B5F /* UCWGextExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCWGextExtension.entitlements; sourceTree = "<group>"; };
 		4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundClip.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +155,6 @@
 				4DC8B62C27F59E7D00B7A927 /* ImagePicker.swift */,
 				4DA546EC27F45E7A00CD04EF /* Assets.xcassets */,
 				4DA546EE27F45E7A00CD04EF /* Preview Content */,
-				4DC8B62E27F5A3D800B7A927 /* BackgroundClip.swift */,
 				4DC9D1312822160500B614E6 /* InfoView.swift */,
 				4D3A9B5D282DFE6800F0483A /* DebugView.swift */,
 			);
@@ -382,7 +378,6 @@
 				4D3A9B5E282DFE6800F0483A /* DebugView.swift in Sources */,
 				4DA546E927F45E7900CD04EF /* uclockwidgetApp.swift in Sources */,
 				4DC9D1322822160500B614E6 /* InfoView.swift in Sources */,
-				4DC8B62F27F5A3D800B7A927 /* BackgroundClip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +389,6 @@
 				4DA5471427F46B6600CD04EF /* ScallopShape.swift in Sources */,
 				4D8FB9352827C1A30072D4C0 /* UCWGext.intentdefinition in Sources */,
 				4DA5470327F45F9D00CD04EF /* UCWGext.swift in Sources */,
-				4DB16BCF282001B700684B5F /* BackgroundClip.swift in Sources */,
 				4DA5471A27F4A36C00CD04EF /* ClockView.swift in Sources */,
 				4DA5471727F4A2D900CD04EF /* Utils.swift in Sources */,
 			);

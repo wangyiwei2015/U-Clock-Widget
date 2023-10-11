@@ -2,7 +2,7 @@
 
 ---
 
-Release: [~~App Store~~ TestFlight ↗](https://testflight.apple.com/join/K2gzBf4e)
+Release: [App Store ↗](https://apps.apple.com/us/app/uclock-widget/id1622170600)
 
 Technical support & feedback: [Issues ↗](https://github.com/wangyiwei2015/U-Clock-Widget/issues) or [email ↗](mailto:wangyw.dev@outlook.com)
 
@@ -15,3 +15,5 @@ Open-source code used in this project
 - [wangyiwei2015/Transparency](https://github.com/wangyiwei2015/Transparency)：My transparent widget library
 
 - [zhangyu1818/clocks-widget](https://github.com/zhangyu1818/clocks-widget)：Transparent widget implementation (for reference)
+
+https://apps.apple.com/us/app/widgetools/id1634741840

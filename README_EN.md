@@ -1,8 +1,8 @@
-# UClock Widgets
+# U-Clock-Widget
 
 ---
 
-Release: [App Store ↗](https://apps.apple.com/us/app/uclock-widget/id1622170600)
+Release: [~~App Store~~ TestFlight ↗](https://testflight.apple.com/join/K2gzBf4e)
 
 Technical support & feedback: [Issues ↗](https://github.com/wangyiwei2015/U-Clock-Widget/issues) or [email ↗](mailto:wangyw.dev@outlook.com)
 

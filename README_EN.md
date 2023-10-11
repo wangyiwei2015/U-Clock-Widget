@@ -16,4 +16,5 @@ Open-source code used in this project
 
 - [zhangyu1818/clocks-widget](https://github.com/zhangyu1818/clocks-widget)：Transparent widget implementation (for reference)
 
-https://apps.apple.com/us/app/widgetools/id1634741840
+---
+

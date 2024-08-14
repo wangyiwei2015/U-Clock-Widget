@@ -36,6 +36,8 @@
 		4DC9D1322822160500B614E6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9D1312822160500B614E6 /* InfoView.swift */; };
 		773217DB9A28531A556D9A3B /* Pods_uclockwidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */; };
 		B3B87A5B2ABC2C3A00681803 /* Transparency in Frameworks */ = {isa = PBXBuildFile; productRef = B3B87A5A2ABC2C3A00681803 /* Transparency */; };
+		B3F2D1062C6D020300B60AC1 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B3F2D1052C6D020300B60AC1 /* InfoPlist.xcstrings */; };
+		B3F2D1072C6D020300B60AC1 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B3F2D1052C6D020300B60AC1 /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,7 @@
 		4DC9D1312822160500B614E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		695F30F460A6E1A904E2A020 /* Pods_uclockwidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uclockwidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E906C1DCAB5D9D96F5AA6C /* Pods-uclockwidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.debug.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.debug.xcconfig"; sourceTree = "<group>"; };
+		B3F2D1052C6D020300B60AC1 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		B50AA8415674EA98EC56CC89 /* Pods-uclockwidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uclockwidget.release.xcconfig"; path = "Target Support Files/Pods-uclockwidget/Pods-uclockwidget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +201,7 @@
 				4D8FB9222826AFD00072D4C0 /* CloverShape.swift */,
 				4DA5471527F4A2D900CD04EF /* Utils.swift */,
 				4D8FB9322827AAEA0072D4C0 /* Localizable.strings */,
+				B3F2D1052C6D020300B60AC1 /* InfoPlist.xcstrings */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 			files = (
 				4DA546F027F45E7A00CD04EF /* Preview Assets.xcassets in Resources */,
 				4D8FB92F2827AAEA0072D4C0 /* Localizable.strings in Resources */,
+				B3F2D1062C6D020300B60AC1 /* InfoPlist.xcstrings in Resources */,
 				4DA546ED27F45E7A00CD04EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F2D1072C6D020300B60AC1 /* InfoPlist.xcstrings in Resources */,
 				4DA5470627F45F9D00CD04EF /* Assets.xcassets in Resources */,
 				4D8FB9302827AAEA0072D4C0 /* Localizable.strings in Resources */,
 			);

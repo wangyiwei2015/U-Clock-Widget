@@ -57,7 +57,7 @@ struct ContentView: View {
             VStack {
                 //Title
                 HStack {
-                    Text("UClock Widgets")
+                    Text("PxClock Widgets")
                         .font(.system(size: 24, weight: .semibold))
                     Spacer()
                     Button {

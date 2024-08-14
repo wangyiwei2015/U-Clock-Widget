@@ -7,7 +7,7 @@
 */
 
 // ContentView
-"UClock Widgets" = "UClock Widgets";
+"UClock Widgets" = "PxClock Widgets";
 "ipad_err" = "The background feature does not support iPad. You can add widgets on the home screen.";
 "_invalid_wall" = "⚠️ The wallpaper has invlid sizes.";
 
@@ -35,6 +35,6 @@
 
 // Widget Ext
 "widget_desc" = "Material style clock widget";
-"uclk_circle" = "UClock (Circle)";
-"uclk_scallop" = "UClock (Scallop)";
-"uclk_clover" = "UClock (Clover)";
+"uclk_circle" = "PxClock (Circle)";
+"uclk_scallop" = "PxClock (Scallop)";
+"uclk_clover" = "PxClock (Clover)";

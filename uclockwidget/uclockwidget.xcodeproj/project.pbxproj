@@ -576,7 +576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.8;
+				MARKETING_VERSION = 1.3.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -615,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.8;
+				MARKETING_VERSION = 1.3.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = uclk;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

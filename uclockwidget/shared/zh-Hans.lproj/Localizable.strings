@@ -7,7 +7,7 @@
 */
 
 // ContentView
-"UClock Widgets" = "UClock 小组件";
+"UClock Widgets" = "PxClock 小组件";
 "ipad_err" = "iPad 不支持透明背景功能；请直接在主屏幕添加小组件。";
 "_invalid_wall" = "⚠️壁纸尺寸错误，请重新选择。";
 
@@ -34,7 +34,7 @@
 "link_email" = "给开发者发邮件 ↗";
 
 // Widget Ext
-"widget_desc" = "Material 风格时钟小组件";
-"uclk_circle" = "UClock (圆形)";
-"uclk_scallop" = "UClock (扇形)";
-"uclk_clover" = "UClock (四叶草)";
+"widget_desc" = "Pixel 风格时钟小组件";
+"uclk_circle" = "PxClock (圆形)";
+"uclk_scallop" = "PxClock (扇形)";
+"uclk_clover" = "PxClock (四叶草)";

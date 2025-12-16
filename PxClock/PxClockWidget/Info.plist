@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Datdot-K7prl.ttf</string>
+		<string>DSEG7Classic-Regular.ttf</string>
+		<string>DSEG14Classic-Regular.ttf</string>
+		<string>DatCub-Regular.ttf</string>
+		<string>E1234-p7pER.ttf</string>
+		<string>EHSMB.TTF</string>
+	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>

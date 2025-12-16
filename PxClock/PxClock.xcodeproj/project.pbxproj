@@ -57,6 +57,7 @@
 		B3476FC92EF16D2100FE8296 /* Exceptions for "PxClockWidget" folder in "PxClockWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"/Localized: Intents.intentdefinition",
 				Info.plist,
 			);
 			target = B3476FB02EF16D2000FE8296 /* PxClockWidgetExtension */;
@@ -72,14 +73,36 @@
 			);
 			target = B3476FB02EF16D2000FE8296 /* PxClockWidgetExtension */;
 		};
-		B3476FF52EF1763400FE8296 /* Exceptions for "PxClockWidget" folder in "PxClock" target */ = {
+		B34770912EF191CD00FE8296 /* Exceptions for "Fonts" folder in "PxClockWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Intents.intentdefinition,
+				"DatCub-Regular.ttf",
+				"Datdot-K7prl.ttf",
+				"DSEG7Classic-Regular.ttf",
+				"DSEG14Classic-Regular.ttf",
+				"E1234-p7pER.ttf",
+				EHSMB.TTF,
 			);
-			target = B3476F7B2EF159EE00FE8296 /* PxClock */;
+			target = B3476FB02EF16D2000FE8296 /* PxClockWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		B34770962EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClock" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = B3476F782EF159EE00FE8296 /* Sources */;
+			membershipExceptions = (
+				"/Localized: Intents.intentdefinition",
+			);
+		};
+		B34770972EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = B3476FAD2EF16D2000FE8296 /* Sources */;
+			membershipExceptions = (
+				"/Localized: Intents.intentdefinition",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B3476F7E2EF159EE00FE8296 /* PxClock */ = {
@@ -100,14 +123,18 @@
 		};
 		B3476F962EF16A7F00FE8296 /* Fonts */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B34770912EF191CD00FE8296 /* Exceptions for "Fonts" folder in "PxClockWidgetExtension" target */,
+			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B3476FB72EF16D2000FE8296 /* PxClockWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B3476FF52EF1763400FE8296 /* Exceptions for "PxClockWidget" folder in "PxClock" target */,
+				B34770962EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClock" target */,
 				B3476FC92EF16D2100FE8296 /* Exceptions for "PxClockWidget" folder in "PxClockWidgetExtension" target */,
+				B34770972EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */,
 			);
 			path = PxClockWidget;
 			sourceTree = "<group>";
@@ -453,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -493,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -528,7 +555,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -563,7 +590,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wyw.uclockwidget.UCWGext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

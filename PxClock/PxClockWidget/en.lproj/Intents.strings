@@ -1,0 +1,130 @@
+"21dtko" = "blue";
+
+"22TUhk-21dtko" = "Just to confirm, you wanted ‘blue’?";
+
+"22TUhk-6Ng3zO" = "Just to confirm, you wanted ‘Auto’?";
+
+"22TUhk-7qIXKz" = "Just to confirm, you wanted ‘purple’?";
+
+"22TUhk-QF5sGR" = "Just to confirm, you wanted ‘cyan’?";
+
+"22TUhk-Ux8r0b" = "Just to confirm, you wanted ‘B&W’?";
+
+"22TUhk-aKgaIX" = "Just to confirm, you wanted ‘yellow’?";
+
+"22TUhk-b4D7Hw" = "Just to confirm, you wanted ‘orange’?";
+
+"22TUhk-o2aa2P" = "Just to confirm, you wanted ‘pink’?";
+
+"22TUhk-tNTUgW" = "Just to confirm, you wanted ‘green’?";
+
+"22TUhk-w3nIMu" = "Just to confirm, you wanted ‘red’?";
+
+"4vWD0H" = "Bottom right";
+
+"6Ng3zO" = "Auto";
+
+"7qIXKz" = "purple";
+
+"9aBrTE" = "Top right";
+
+"AAuQ3L" = "Bordered Style";
+
+"AE3xsb" = "Background Position";
+
+"C0z25D" = "Bordered";
+
+"Fl8UrZ" = "shown";
+
+"GhXxYf" = "Middle right";
+
+"K340Zn" = "Date Format (Optional)";
+
+"OdpvYG" = "hidden";
+
+"QF5sGR" = "cyan";
+
+"QKVOyd" = "Color Theme";
+
+"SHpmWM" = "Bottom left";
+
+"Ux8r0b" = "B&W";
+
+"V8i2ky" = "Color Theme";
+
+"aIHBzt" = "where the widget is placed";
+
+"aKgaIX" = "yellow";
+
+"b4D7Hw" = "orange";
+
+"cMeyFg" = "Numbers on face";
+
+"d9kXtG-4vWD0H" = "Just to confirm, you wanted ‘Bottom right’?";
+
+"d9kXtG-9aBrTE" = "Just to confirm, you wanted ‘Top right’?";
+
+"d9kXtG-GhXxYf" = "Just to confirm, you wanted ‘Middle right’?";
+
+"d9kXtG-SHpmWM" = "Just to confirm, you wanted ‘Bottom left’?";
+
+"d9kXtG-ljbAth" = "Just to confirm, you wanted ‘Middle left’?";
+
+"d9kXtG-ueWthp" = "Just to confirm, you wanted ‘Top left’?";
+
+"enzawY" = "Filled";
+
+"gf1NIH" = "Second Indicator";
+
+"hKewWC" = "Position";
+
+"kBX6CD" = "EE dd";
+
+"ljbAth" = "Middle left";
+
+"lrrYo7-4vWD0H" = "There are ${count} options matching ‘Bottom right’.";
+
+"lrrYo7-9aBrTE" = "There are ${count} options matching ‘Top right’.";
+
+"lrrYo7-GhXxYf" = "There are ${count} options matching ‘Middle right’.";
+
+"lrrYo7-SHpmWM" = "There are ${count} options matching ‘Bottom left’.";
+
+"lrrYo7-ljbAth" = "There are ${count} options matching ‘Middle left’.";
+
+"lrrYo7-ueWthp" = "There are ${count} options matching ‘Top left’.";
+
+"o2aa2P" = "pink";
+
+"sf3KgG" = "hidden";
+
+"tNTUgW" = "green";
+
+"ua6tfs" = "shown";
+
+"ueWthp" = "Top left";
+
+"v5Jf4j-21dtko" = "There are ${count} options matching ‘blue’.";
+
+"v5Jf4j-6Ng3zO" = "There are ${count} options matching ‘Auto’.";
+
+"v5Jf4j-7qIXKz" = "There are ${count} options matching ‘purple’.";
+
+"v5Jf4j-QF5sGR" = "There are ${count} options matching ‘cyan’.";
+
+"v5Jf4j-Ux8r0b" = "There are ${count} options matching ‘B&W’.";
+
+"v5Jf4j-aKgaIX" = "There are ${count} options matching ‘yellow’.";
+
+"v5Jf4j-b4D7Hw" = "There are ${count} options matching ‘orange’.";
+
+"v5Jf4j-o2aa2P" = "There are ${count} options matching ‘pink’.";
+
+"v5Jf4j-tNTUgW" = "There are ${count} options matching ‘green’.";
+
+"v5Jf4j-w3nIMu" = "There are ${count} options matching ‘red’.";
+
+"w3nIMu" = "red";
+
+"x2WGM5" = "Position Small";
+

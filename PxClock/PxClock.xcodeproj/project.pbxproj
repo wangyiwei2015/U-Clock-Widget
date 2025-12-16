@@ -88,14 +88,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B34770962EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClock" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = B3476F782EF159EE00FE8296 /* Sources */;
-			membershipExceptions = (
-				"/Localized: Intents.intentdefinition",
-			);
-		};
-		B34770972EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */ = {
+		B34771A42EF1A57900FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = B3476FAD2EF16D2000FE8296 /* Sources */;
 			membershipExceptions = (
@@ -132,9 +125,8 @@
 		B3476FB72EF16D2000FE8296 /* PxClockWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B34770962EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClock" target */,
 				B3476FC92EF16D2100FE8296 /* Exceptions for "PxClockWidget" folder in "PxClockWidgetExtension" target */,
-				B34770972EF191EA00FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */,
+				B34771A42EF1A57900FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */,
 			);
 			path = PxClockWidget;
 			sourceTree = "<group>";

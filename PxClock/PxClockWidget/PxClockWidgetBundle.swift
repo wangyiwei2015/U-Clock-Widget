@@ -12,9 +12,9 @@ import SwiftUI
 struct PxClockWidgetBundle: WidgetBundle {
     var body: some Widget {
         microClkWidget()
-//        UCWG_Scallop()
-//        UCWG_Circle()
-//        UCWG_Clover()
+        UCWG_Scallop()
+        UCWG_Circle()
+        UCWG_Clover()
         if #available(iOS 18.0, *) {
             PxClockWidgetControl()
         }

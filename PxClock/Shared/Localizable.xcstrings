@@ -1,0 +1,534 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "_invalid_wall" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ The wallpaper has invlid sizes."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️壁纸尺寸错误，请重新选择。"
+          }
+        }
+      }
+    },
+    "%@%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@%3$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%lld" : {
+      "shouldTranslate" : false
+    },
+    "%lld styles" : {
+      "shouldTranslate" : false
+    },
+    "3" : {
+      "shouldTranslate" : false
+    },
+    "6" : {
+      "shouldTranslate" : false
+    },
+    "8" : {
+      "shouldTranslate" : false
+    },
+    "9" : {
+      "shouldTranslate" : false
+    },
+    "12" : {
+      "shouldTranslate" : false
+    },
+    "A an example control that runs a timer." : {
+
+    },
+    "Analog" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模拟"
+          }
+        }
+      }
+    },
+    "colorext" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wallpaper color extractor"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "壁纸颜色提取"
+          }
+        }
+      }
+    },
+    "Configuration" : {
+
+    },
+    "contact_text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "For support or any other questions, feel free to contact me"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如需帮助或者有任何问题，欢迎联系我。"
+          }
+        }
+      }
+    },
+    "Damping  .%lld" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阻尼 .%lld"
+          }
+        }
+      }
+    },
+    "Digital" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数字"
+          }
+        }
+      }
+    },
+    "Digital Clock" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Display style" : {
+
+    },
+    "Display Style" : {
+
+    },
+    "Done" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        }
+      }
+    },
+    "info_title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info & Help"
+          }
+        }
+      }
+    },
+    "ipad_err" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The background feature does not support iPad. You can add widgets on the home screen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iPad 不支持透明背景功能；请直接在主屏幕添加小组件。"
+          }
+        }
+      }
+    },
+    "link_appstore" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View on App Store ↗"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前往 App Store ↗"
+          }
+        }
+      }
+    },
+    "link_email" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send email to the developer ↗"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "给开发者发邮件 ↗"
+          }
+        }
+      }
+    },
+    "link_github" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View sources on GitHub ↗"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前往 GitHub 页面 ↗"
+          }
+        }
+      }
+    },
+    "Long press = CONFIG" : {
+
+    },
+    "Modern automatic" : {
+
+    },
+    "Modern dark" : {
+
+    },
+    "Modern light" : {
+
+    },
+    "Off" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关"
+          }
+        }
+      }
+    },
+    "On" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开"
+          }
+        }
+      }
+    },
+    "project_info" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is an open-source project."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是一个开源项目。"
+          }
+        }
+      }
+    },
+    "PxClock Widgets" : {
+
+    },
+    "rate_text" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rate or share the app if you like it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果你喜欢本应用，欢迎五星好评或分享给别人。"
+          }
+        }
+      }
+    },
+    "Response .%lld" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "弹性 .%lld"
+          }
+        }
+      }
+    },
+    "Retro LCD" : {
+
+    },
+    "Retro LED" : {
+
+    },
+    "Size %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尺寸 %@"
+          }
+        }
+      }
+    },
+    "Start a timer" : {
+
+    },
+    "Start Timer" : {
+
+    },
+    "sw1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. Go to home screen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1、前往主屏幕"
+          }
+        }
+      }
+    },
+    "sw2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. Long press to enter edit mode"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2、长按进入编辑模式"
+          }
+        }
+      }
+    },
+    "sw3" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. Swipe to a new empty page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3、划到最右的空白页面"
+          }
+        }
+      }
+    },
+    "sw4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. Take a screenshot"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4、截图"
+          }
+        }
+      }
+    },
+    "sw5" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. Repeat for light/dark mode"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5、若亮/暗模式壁纸不同，则需分别截图"
+          }
+        }
+      }
+    },
+    "sw6" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6. Come back and choose them"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6、返回这里，选择刚才的截图"
+          }
+        }
+      }
+    },
+    "SwiftUI" : {
+      "shouldTranslate" : false
+    },
+    "This is an example widget." : {
+
+    },
+    "Timer" : {
+
+    },
+    "Timer is running" : {
+
+    },
+    "Timer Name" : {
+
+    },
+    "Timer Name Configuration" : {
+
+    },
+    "transparent" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transparent widget effect"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件透明背景效果"
+          }
+        }
+      }
+    },
+    "uclk_circle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (Circle)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (圆形)"
+          }
+        }
+      }
+    },
+    "uclk_clover" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (Clover)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (四叶草)"
+          }
+        }
+      }
+    },
+    "uclk_scallop" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (Scallop)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PxClock (扇形)"
+          }
+        }
+      }
+    },
+    "v%@(%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "v%1$@(%2$@)"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Wallpaper" : {
+
+    },
+    "wangyiwei2015 / Transparency ↗" : {
+      "shouldTranslate" : false
+    },
+    "widget config" : {
+
+    },
+    "widget_desc" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Material style clock widget"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pixel 风格时钟小组件"
+          }
+        }
+      }
+    },
+    "yamoridon / ColorThiefSwift ↗" : {
+      "shouldTranslate" : false
+    }
+  },
+  "version" : "1.1"
+}

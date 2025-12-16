@@ -1,0 +1,24 @@
+{
+  "originHash" : "8abae50d078f9f58b5660935a65b587f6e9cb403754dd8f08068ef862ad668d3",
+  "pins" : [
+    {
+      "identity" : "colorthiefswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yamoridon/ColorThiefSwift",
+      "state" : {
+        "revision" : "ac04a95acca965f8030a01293c31621b2a812c39",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "transparency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wangyiwei2015/Transparency",
+      "state" : {
+        "branch" : "dev",
+        "revision" : "b929cb57a1a666c71c352f3835f944ff5c9762be"
+      }
+    }
+  ],
+  "version" : 3
+}

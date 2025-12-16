@@ -111,6 +111,7 @@ struct microClkWidgetEntryView : View {
             bgColor
             Text("\(hh)\(seperater)\(mm)")
                 .font(.custom("E1234", size: fontSize))
+                .contentTransition(.numericText())
                 .foregroundColor(foreColor)
                 .shadow(color: Color(UIColor(white: 0, alpha: 0.4)), radius: 2, x: 0, y: 3)
         }

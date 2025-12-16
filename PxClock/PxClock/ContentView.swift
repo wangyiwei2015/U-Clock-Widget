@@ -10,10 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            MiniClockView().overlay {
-                NavigationLink("widget config") {
+            Color.clear.overlay {
+                MiniClockView()
+            }.overlay(alignment: .topLeading) {
+                NavigationLink {
                     UClockMainView()
-                }
+                } label: {
+                    Image(systemName: "gear")
+                }.tint(.gray).font(.title2).padding(.leading).padding(.top, 10)
             }
         }
     }

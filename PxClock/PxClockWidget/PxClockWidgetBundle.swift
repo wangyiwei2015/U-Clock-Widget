@@ -15,6 +15,7 @@ struct PxClockWidgetBundle: WidgetBundle {
         UCWG_Scallop()
         UCWG_Circle()
         UCWG_Clover()
+        SheikahWidget()
         if #available(iOS 18.0, *) {
             PxClockWidgetControl()
         }

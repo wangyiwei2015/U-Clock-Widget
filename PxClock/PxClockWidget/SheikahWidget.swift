@@ -15,7 +15,7 @@ import AppIntents
 
 struct IntentS: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "sheikah_wdgt_title"
-    static var description = IntentDescription("This is an example widget.")
+    static var description = IntentDescription("Sheikah font clock")
 }
 
 struct ProviderS: AppIntentTimelineProvider {

@@ -12,6 +12,8 @@
 		B3476FB42EF16D2000FE8296 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3476FB32EF16D2000FE8296 /* WidgetKit.framework */; };
 		B3476FB62EF16D2000FE8296 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3476FB52EF16D2000FE8296 /* SwiftUI.framework */; };
 		B3476FC52EF16D2100FE8296 /* PxClockWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3476FB12EF16D2000FE8296 /* PxClockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B399DF232F0A2BA400C1A083 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B399DF102F0A2BA400C1A083 /* Intents.intentdefinition */; };
+		B399DF242F0A361000C1A083 /* Intents.intentdefinition in Resources */ = {isa = PBXBuildFile; fileRef = B399DF102F0A2BA400C1A083 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		B3476FB32EF16D2000FE8296 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B3476FB52EF16D2000FE8296 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B3476FCB2EF16D4F00FE8296 /* PxClockWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PxClockWidgetExtension.entitlements; sourceTree = "<group>"; };
+		B399DF162F0A2BA400C1A083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		B399DF172F0A2BA400C1A083 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
+		B399DF182F0A2BA400C1A083 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Intents.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -57,7 +62,6 @@
 		B3476FC92EF16D2100FE8296 /* Exceptions for "PxClockWidget" folder in "PxClockWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"/Localized: Intents.intentdefinition",
 				Info.plist,
 			);
 			target = B3476FB02EF16D2000FE8296 /* PxClockWidgetExtension */;
@@ -88,16 +92,6 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B34771A42EF1A57900FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = B3476FAD2EF16D2000FE8296 /* Sources */;
-			membershipExceptions = (
-				"/Localized: Intents.intentdefinition",
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B3476F7E2EF159EE00FE8296 /* PxClock */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -127,7 +121,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				B3476FC92EF16D2100FE8296 /* Exceptions for "PxClockWidget" folder in "PxClockWidgetExtension" target */,
-				B34771A42EF1A57900FE8296 /* Exceptions for "PxClockWidget" folder in "Compile Sources" phase from "PxClockWidgetExtension" target */,
 			);
 			path = PxClockWidget;
 			sourceTree = "<group>";
@@ -159,6 +152,7 @@
 		B3476F732EF159EE00FE8296 = {
 			isa = PBXGroup;
 			children = (
+				B399DF262F0A392F00C1A083 /* Intents */,
 				B3476FCB2EF16D4F00FE8296 /* PxClockWidgetExtension.entitlements */,
 				B3476F962EF16A7F00FE8296 /* Fonts */,
 				B3476F952EF16A7500FE8296 /* Shared */,
@@ -185,6 +179,14 @@
 				B3476FB52EF16D2000FE8296 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B399DF262F0A392F00C1A083 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				B399DF102F0A2BA400C1A083 /* Intents.intentdefinition */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B399DF242F0A361000C1A083 /* Intents.intentdefinition in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B399DF232F0A2BA400C1A083 /* Intents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +328,19 @@
 			targetProxy = B3476FC32EF16D2100FE8296 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B399DF102F0A2BA400C1A083 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B399DF162F0A2BA400C1A083 /* Base */,
+				B399DF172F0A2BA400C1A083 /* en */,
+				B399DF182F0A2BA400C1A083 /* zh-Hans */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B3476F852EF159EF00FE8296 /* Debug */ = {

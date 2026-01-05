@@ -139,6 +139,9 @@
         }
       }
     },
+    "e|MM,MMM;dd,EEE" : {
+
+    },
     "info_title" : {
       "localizations" : {
         "en" : {
@@ -294,6 +297,15 @@
 
     },
     "Retro LED" : {
+
+    },
+    "Sheikah Date" : {
+
+    },
+    "Sheikah font clock" : {
+
+    },
+    "sheikah_wdgt_title" : {
 
     },
     "Size %@" : {

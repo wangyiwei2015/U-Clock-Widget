@@ -107,13 +107,16 @@ struct microClkWidgetEntryView : View {
 
     var body: some View {
         let (hh, mm) = timeStr
-        return ZStack {
-            bgColor
+        ZStack {
+            //bgColor
             Text("\(hh)\(seperater)\(mm)")
                 .font(.custom("E1234", size: fontSize))
                 .contentTransition(.numericText())
                 .foregroundColor(foreColor)
                 .shadow(color: Color(UIColor(white: 0, alpha: 0.4)), radius: 2, x: 0, y: 3)
+        }
+        .containerBackground(for: .widget) {
+            Color.gray.opacity(0.1)
         }
     }
 }
@@ -130,6 +133,7 @@ struct microClkWidget: Widget {
         .contentMarginsDisabled()
         .supportedFamilies([.accessoryRectangular, .systemSmall, .systemMedium, .systemLarge, .systemExtraLarge])
         //.disfavoredLocations([.], for: [])
+        .containerBackgroundRemovable()
     }
 }
 
